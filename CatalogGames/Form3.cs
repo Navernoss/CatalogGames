@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CatalogGames.SteamDataSetTableAdapters;
+using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CatalogGames
 {
@@ -54,6 +57,17 @@ namespace CatalogGames
             genresDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12f, FontStyle.Bold);
             genresDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             genresDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            genresDataGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
+            tagsDataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(88, 127, 219);
+            tagsDataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
+            tagsDataGridView1.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#829FE4");
+            tagsDataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
+            tagsDataGridView1.EnableHeadersVisualStyles = false;
+            tagsDataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12f, FontStyle.Bold);
+            tagsDataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            tagsDataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tagsDataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+
         }
 
         private void linkLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -138,7 +152,18 @@ namespace CatalogGames
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            if (name_of_genreTextBox.Text != "")
+            {
+                int id = genresDataGridView.CurrentRow.Index;
+                genresDataGridView.Rows[id].Cells[1].Value = name_of_genreTextBox.Text;
+                genresTableAdapter.Update(steamDataSet);
+                genresDataGridView.DataSource = genresBindingSource;
+            }
+            else
+            {
+                MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
+            }
+            genresTableAdapter.Update(steamDataSet);
         }
 
         private void name_of_genreLabel_Click(object sender, EventArgs e)
@@ -149,6 +174,72 @@ namespace CatalogGames
         private void name_of_genreTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool error = false;
+            if (name_of_genreTextBox.Text != "") {
+                for (int i = 0; i < genresDataGridView.Rows.Count - 1; i++) {
+                    string cellValue = genresDataGridView.Rows[i].Cells[1].Value?.ToString() ?? "";
+                    if (cellValue != null)
+                    {
+                        if (name_of_genreTextBox.Text == genresDataGridView.Rows[i].Cells[1].Value.ToString())
+                        {
+                            error = true;
+                            MessageBox.Show("Такой жанр уже существует. Запрос на добавление отклонен.", "Добавление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
+                    }
+                }
+                if (error == false) {
+                    DataRow newRow = steamDataSet.Genres.NewRow();
+                    newRow[1] = name_of_genreTextBox.Text;
+                    steamDataSet.Genres.Rows.Add(newRow);
+                    genresTableAdapter.Update(steamDataSet.Genres);
+                    name_of_genreTextBox.Text = "";
+                }
+            }
+        }
+
+        private void name_of_genreTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (name_of_genreTextBox.Text != "" && genresDataGridView.CurrentRow.Index != -1) {
+                bool error = false;
+                int idgenre = int.Parse(genresDataGridView.Rows[genresDataGridView.CurrentRow.Index].Cells[0].Value.ToString());
+                for (int i = 0; i < gamesDataGridView.Rows.Count - 1; i++) {
+                    int genre = int.Parse(gamesDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn5"].Value.ToString());
+                    Console.WriteLine(genre);
+                    if (idgenre == int.Parse(gamesDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn5"].Value.ToString())){
+                        error = true;
+                        MessageBox.Show("Такой жанр имеет связи в таблице 'Игры'. Сначала уберите этот жанр из всех строк в таблице 'Игры' и повторите попытку.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                }
+                if (error == false) {
+                    DialogResult dr = MessageBox.Show("Вы точно хотите удалить жанр " + genresDataGridView.Rows[genresDataGridView.CurrentRow.Index].Cells[1].Value.ToString(), "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes) {
+                        foreach (DataGridViewRow row in genresDataGridView.SelectedRows) { 
+                            genresDataGridView.Rows.Remove(row);
+                            name_of_genreTextBox.Text = "";
+                        }
+                        genresTableAdapter.Update(steamDataSet);
+                    }
+                }
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            genresTableAdapter.Update(steamDataSet);
         }
     }
 }

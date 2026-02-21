@@ -136,7 +136,7 @@
     <value>82, 32</value>
   </data>
   <data name="loginmain.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>5</value>
   </data>
   <data name="loginmain.Text" xml:space="preserve">
     <value>Вход</value>
@@ -195,6 +195,9 @@
   <data name="textBoxlogin.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="textBoxlogin.Text" xml:space="preserve">
+    <value>sudo</value>
+  </data>
   <data name="&gt;&gt;textBoxlogin.Name" xml:space="preserve">
     <value>textBoxlogin</value>
   </data>
@@ -218,6 +221,9 @@
   </data>
   <data name="textBoxpassword.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="textBoxpassword.Text" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;textBoxpassword.Name" xml:space="preserve">
     <value>textBoxpassword</value>
@@ -271,7 +277,7 @@
     <value>158, 57</value>
   </data>
   <data name="buttonlogin.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>0</value>
   </data>
   <data name="buttonlogin.Text" xml:space="preserve">
     <value>Войти</value>
@@ -288,23 +294,8 @@
   <data name="&gt;&gt;buttonlogin.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>id</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>login</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>password</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>level of access</value>
-  </data>
   <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>143, 17</value>
-  </metadata>
-  <metadata name="steamDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
   </metadata>
   <data name="usersDataGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 359</value>
@@ -330,6 +321,27 @@
   <data name="&gt;&gt;usersDataGridView.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>id</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>level of access</value>
+  </data>
+  <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>143, 17</value>
+  </metadata>
+  <metadata name="steamDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="steamDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>

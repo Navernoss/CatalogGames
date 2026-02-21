@@ -33,7 +33,7 @@ namespace CatalogGames
         {
             // TODO: This line of code loads data into the 'steamDataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.steamDataSet.Users);
-
+            
         }
 
         private void buttonlogin_Click(object sender, EventArgs e)
