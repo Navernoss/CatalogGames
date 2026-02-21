@@ -41,6 +41,8 @@ namespace CatalogGames
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'steamDataSet.Developer' table. You can move, or remove it, as needed.
+            this.developerTableAdapter.Fill(this.steamDataSet.Developer);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "steamDataSet.Genres". При необходимости она может быть перемещена или удалена.
             this.genresTableAdapter.Fill(this.steamDataSet.Genres);
             // TODO: This line of code loads data into the 'steamDataSet.Tags' table. You can move, or remove it, as needed.
@@ -67,6 +69,23 @@ namespace CatalogGames
             tagsDataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             tagsDataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tagsDataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
+            developerDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(88, 127, 219);
+            developerDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
+            developerDataGridView.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#829FE4");
+            developerDataGridView.DefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
+            developerDataGridView.EnableHeadersVisualStyles = false;
+            developerDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12f, FontStyle.Bold);
+            developerDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            developerDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            developerDataGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
+            System.Windows.Forms.Button[] buttons = { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
+
+            foreach (System.Windows.Forms.Button btn in buttons)
+            {
+                btn.BackColor = ColorTranslator.FromHtml("#829FE4");
+                btn.ForeColor = Color.FromArgb(44, 41, 227);
+                btn.Font = new Font("Arial",8f);
+            }
 
         }
 
@@ -240,6 +259,181 @@ namespace CatalogGames
         private void button4_Click(object sender, EventArgs e)
         {
             genresTableAdapter.Update(steamDataSet);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && tagsDataGridView1.CurrentRow.Index != -1)
+            {
+                bool error = false;
+                int idtag = int.Parse(tagsDataGridView1.Rows[tagsDataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+                for (int i = 0; i < game_TagsDataGridView1.Rows.Count; i++)
+                {
+                    int tag = int.Parse(game_TagsDataGridView1.Rows[i].Cells[2].Value.ToString());
+                    if (idtag == tag)
+                    {
+                        error = true;
+                        MessageBox.Show("Такой тэг имеет связи в таблице 'Игры'. Сначала уберите этот тэг из всех строк в таблице 'Игры' и повторите попытку.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                }
+                if (error == false)
+                {
+                    DialogResult dr = MessageBox.Show("Вы точно хотите удалить тэг " + tagsDataGridView1.Rows[tagsDataGridView1.CurrentRow.Index].Cells[1].Value.ToString(), "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes)
+                    {
+                        foreach (DataGridViewRow row in tagsDataGridView1.SelectedRows)
+                        {
+                            tagsDataGridView1.Rows.Remove(row);
+                            textBox1.Text = "";
+                        }
+                        tagsTableAdapter.Update(steamDataSet);
+                    }
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            bool error = false;
+            if (textBox1.Text != "")
+            {
+                for (int i = 0; i < tagsDataGridView.Rows.Count - 1; i++)
+                {
+                    string cellValue = tagsDataGridView.Rows[i].Cells[1].Value?.ToString() ?? "";
+                    if (cellValue != null)
+                    {
+                        if (textBox1.Text == tagsDataGridView.Rows[i].Cells[1].Value.ToString())
+                        {
+                            error = true;
+                            MessageBox.Show("Такой жанр уже существует. Запрос на добавление отклонен.", "Добавление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
+                    }
+                }
+                if (error == false)
+                {
+                    DataRow newRow = steamDataSet.Tags.NewRow();
+                    newRow[1] = textBox1.Text;
+                    steamDataSet.Tags.Rows.Add(newRow);
+                    tagsTableAdapter.Update(steamDataSet);
+                    textBox1.Text = "";
+                }
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                int id = tagsDataGridView1.CurrentRow.Index;
+                tagsDataGridView1.Rows[id].Cells[1].Value = textBox1.Text;
+                tagsTableAdapter.Update(steamDataSet);
+                tagsDataGridView1.DataSource = tagsBindingSource;
+            }
+            else
+            {
+                MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
+            }
+            tagsTableAdapter.Update(steamDataSet);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            bool error = false;
+            if (name_of_developerTextBox.Text != "")
+            {
+                for (int i = 0; i < developerDataGridView.Rows.Count; i++)
+                {
+                    string cellValue = developerDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn21"].Value?.ToString() ?? "";
+                    if (cellValue != null)
+                    {
+                        if (name_of_developerTextBox.Text == developerDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn21"].Value.ToString())
+                        {
+                            error = true;
+                            MessageBox.Show("Такой разработчик уже существует. Запрос на добавление отклонен.", "Добавление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
+                    }
+                }
+                if (error == false)
+                {
+                    DataRow newRow = steamDataSet.Developer.NewRow();
+                    newRow[1] = name_of_developerTextBox.Text;
+                    newRow[2] = foundedDateTimePicker.Text;
+                    newRow[3] = founderTextBox.Text;
+                    newRow[4] = websiteTextBox.Text;
+                    newRow[5] = number_of_employeesTextBox.Text;
+                    steamDataSet.Developer.Rows.Add(newRow);
+                    developerTableAdapter.Update(steamDataSet);
+                    name_of_genreTextBox.Text = "";
+                    name_of_developerTextBox.Text = "";
+                    foundedDateTimePicker.Text = "";
+                    founderTextBox.Text = "";
+                    websiteTextBox.Text = "";
+                    number_of_employeesTextBox.Text = "";
+                }
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (name_of_developerTextBox.Text != "" && developerDataGridView.CurrentRow.Index != -1)
+            {
+                bool error = false;
+                int iddev = int.Parse(developerDataGridView.Rows[developerDataGridView.CurrentRow.Index].Cells[0].Value.ToString());
+                for (int i = 0; i < gamesDataGridView.Rows.Count - 1; i++)
+                {
+                    int dev = int.Parse(gamesDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn6"].Value.ToString());
+                    if (iddev == dev)
+                    {
+                        error = true;
+                        MessageBox.Show("Этот разработчик имеет связи в таблице 'Игры'. Сначала уберите этого разработчика из всех строк в таблице 'Игры' и повторите попытку.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                }
+                if (error == false)
+                {
+                    DialogResult dr = MessageBox.Show("Вы точно хотите удалить разработчика " + developerDataGridView.Rows[developerDataGridView.CurrentRow.Index].Cells[1].Value.ToString(), "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes)
+                    {
+                        foreach (DataGridViewRow row in developerDataGridView.SelectedRows)
+                        {
+                            developerDataGridView.Rows.Remove(row);
+                            name_of_developerTextBox.Text = "";
+                            foundedDateTimePicker.Text = "";
+                            founderTextBox.Text = "";
+                            websiteTextBox.Text = "";
+                            number_of_employeesTextBox.Text = "";
+                        }
+                        developerTableAdapter.Update(steamDataSet);
+                    }
+                }
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (name_of_developerTextBox.Text != "" &&
+            foundedDateTimePicker.Text != "" &&
+            founderTextBox.Text != "" &&
+            websiteTextBox.Text != "" &&
+            number_of_employeesTextBox.Text != "")
+            {
+                int id = developerDataGridView.CurrentRow.Index;
+                developerDataGridView.Rows[id].Cells[1].Value = name_of_developerTextBox.Text;
+                developerDataGridView.Rows[id].Cells[2].Value = foundedDateTimePicker.Text;
+                developerDataGridView.Rows[id].Cells[3].Value = founderTextBox.Text;
+                developerDataGridView.Rows[id].Cells[4].Value = websiteTextBox.Text;
+                developerDataGridView.Rows[id].Cells[5].Value = number_of_employeesTextBox.Text;
+                developerTableAdapter.Update(steamDataSet);
+                developerDataGridView.DataSource = developerBindingSource;
+            }
+            else
+            {
+                MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
+            }
+            developerTableAdapter.Update(steamDataSet);
         }
     }
 }

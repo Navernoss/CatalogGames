@@ -34,9 +34,19 @@
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label name_of_gameLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.Windows.Forms.Label label4;
+            System.Windows.Forms.Label name_of_developerLabel;
+            System.Windows.Forms.Label foundedLabel;
+            System.Windows.Forms.Label founderLabel;
+            System.Windows.Forms.Label websiteLabel;
+            System.Windows.Forms.Label number_of_employeesLabel;
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tagsDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.steamDataSet = new CatalogGames.SteamDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.name_of_genreTextBox = new System.Windows.Forms.TextBox();
+            this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,6 +55,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -56,18 +67,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gamesDataGridView = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tagsDataGridView = new System.Windows.Forms.DataGridView();
-            this.name_of_gameLabel1 = new System.Windows.Forms.Label();
-            this.game_TagsDataGridView = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.descriptionLabel1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.picturePictureBox = new System.Windows.Forms.PictureBox();
-            this.linkLinkLabel = new System.Windows.Forms.LinkLabel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.steamDataSet = new CatalogGames.SteamDataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,45 +80,93 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tagsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.name_of_gameLabel1 = new System.Windows.Forms.Label();
+            this.game_TagsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.game_TagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.descriptionLabel1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.picturePictureBox = new System.Windows.Forms.PictureBox();
+            this.linkLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.gamesTableAdapter = new CatalogGames.SteamDataSetTableAdapters.GamesTableAdapter();
             this.tableAdapterManager = new CatalogGames.SteamDataSetTableAdapters.TableAdapterManager();
             this.game_TagsTableAdapter = new CatalogGames.SteamDataSetTableAdapters.Game_TagsTableAdapter();
             this.tagsTableAdapter = new CatalogGames.SteamDataSetTableAdapters.TagsTableAdapter();
             this.genresTableAdapter = new CatalogGames.SteamDataSetTableAdapters.GenresTableAdapter();
-            this.tagsDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.game_TagsDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tagIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.game_TagsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.developerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.developerTableAdapter = new CatalogGames.SteamDataSetTableAdapters.DeveloperTableAdapter();
+            this.developerDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.name_of_developerTextBox = new System.Windows.Forms.TextBox();
+            this.foundedDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.founderTextBox = new System.Windows.Forms.TextBox();
+            this.websiteTextBox = new System.Windows.Forms.TextBox();
+            this.number_of_employeesTextBox = new System.Windows.Forms.TextBox();
             name_of_genreLabel = new System.Windows.Forms.Label();
             linkLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             name_of_gameLabel = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            name_of_developerLabel = new System.Windows.Forms.Label();
+            foundedLabel = new System.Windows.Forms.Label();
+            founderLabel = new System.Windows.Forms.Label();
+            websiteLabel = new System.Windows.Forms.Label();
+            number_of_employeesLabel = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.steamDataSet)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genresDataGridView)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gamesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).BeginInit();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.steamDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.developerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.developerDataGridView)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // name_of_genreLabel
@@ -164,6 +211,8 @@
             // 
             this.tabPage4.AutoScroll = true;
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
+            this.tabPage4.Controls.Add(this.game_TagsDataGridView1);
+            this.tabPage4.Controls.Add(this.groupBox2);
             this.tabPage4.Controls.Add(this.tagsDataGridView1);
             this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Controls.Add(this.genresDataGridView);
@@ -173,6 +222,32 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Жанры и теги";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
+            // 
+            // tagsDataGridView1
+            // 
+            this.tagsDataGridView1.AutoGenerateColumns = false;
+            this.tagsDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
+            this.tagsDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tagsDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.tagsDataGridView1.DataSource = this.tagsBindingSource;
+            this.tagsDataGridView1.EnableHeadersVisualStyles = false;
+            this.tagsDataGridView1.GridColor = System.Drawing.Color.DarkGray;
+            this.tagsDataGridView1.Location = new System.Drawing.Point(27, 302);
+            this.tagsDataGridView1.Name = "tagsDataGridView1";
+            this.tagsDataGridView1.Size = new System.Drawing.Size(277, 292);
+            this.tagsDataGridView1.TabIndex = 2;
+            // 
+            // tagsBindingSource
+            // 
+            this.tagsBindingSource.DataMember = "Tags";
+            this.tagsBindingSource.DataSource = this.steamDataSet;
+            // 
+            // steamDataSet
+            // 
+            this.steamDataSet.DataSetName = "SteamDataSet";
+            this.steamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -198,6 +273,11 @@
             this.name_of_genreTextBox.TabIndex = 4;
             this.name_of_genreTextBox.TextChanged += new System.EventHandler(this.name_of_genreTextBox_TextChanged);
             this.name_of_genreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.name_of_genreTextBox_KeyPress);
+            // 
+            // genresBindingSource
+            // 
+            this.genresBindingSource.DataMember = "Genres";
+            this.genresBindingSource.DataSource = this.steamDataSet;
             // 
             // button3
             // 
@@ -249,6 +329,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Controls.Add(this.developerDataGridView);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -320,6 +402,11 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // gamesBindingSource
+            // 
+            this.gamesBindingSource.DataMember = "Games";
+            this.gamesBindingSource.DataSource = this.steamDataSet;
             // 
             // bindingNavigatorCountItem
             // 
@@ -425,125 +512,6 @@
             this.gamesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gamesDataGridView_CellContentClick);
             this.gamesDataGridView.SelectionChanged += new System.EventHandler(this.gamesDataGridView_SelectionChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(553, 370);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            // 
-            // tagsDataGridView
-            // 
-            this.tagsDataGridView.AllowUserToAddRows = false;
-            this.tagsDataGridView.AutoGenerateColumns = false;
-            this.tagsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tagsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15});
-            this.tagsDataGridView.DataSource = this.tagsBindingSource;
-            this.tagsDataGridView.Location = new System.Drawing.Point(293, 75);
-            this.tagsDataGridView.Name = "tagsDataGridView";
-            this.tagsDataGridView.Size = new System.Drawing.Size(28, 220);
-            this.tagsDataGridView.TabIndex = 8;
-            this.tagsDataGridView.Visible = false;
-            // 
-            // name_of_gameLabel1
-            // 
-            this.name_of_gameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Name of game", true));
-            this.name_of_gameLabel1.Location = new System.Drawing.Point(290, 416);
-            this.name_of_gameLabel1.Name = "name_of_gameLabel1";
-            this.name_of_gameLabel1.Size = new System.Drawing.Size(100, 23);
-            this.name_of_gameLabel1.TabIndex = 14;
-            this.name_of_gameLabel1.Text = "label4";
-            // 
-            // game_TagsDataGridView
-            // 
-            this.game_TagsDataGridView.AllowUserToAddRows = false;
-            this.game_TagsDataGridView.AllowUserToDeleteRows = false;
-            this.game_TagsDataGridView.AutoGenerateColumns = false;
-            this.game_TagsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.game_TagsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
-            this.game_TagsDataGridView.DataSource = this.game_TagsBindingSource;
-            this.game_TagsDataGridView.Location = new System.Drawing.Point(122, 30);
-            this.game_TagsDataGridView.Name = "game_TagsDataGridView";
-            this.game_TagsDataGridView.Size = new System.Drawing.Size(33, 220);
-            this.game_TagsDataGridView.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
-            // 
-            // descriptionLabel1
-            // 
-            this.descriptionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Description", true));
-            this.descriptionLabel1.Location = new System.Drawing.Point(760, 345);
-            this.descriptionLabel1.Name = "descriptionLabel1";
-            this.descriptionLabel1.Size = new System.Drawing.Size(124, 126);
-            this.descriptionLabel1.TabIndex = 13;
-            this.descriptionLabel1.Text = "label4";
-            this.descriptionLabel1.Click += new System.EventHandler(this.descriptionLabel1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
-            // 
-            // picturePictureBox
-            // 
-            this.picturePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.gamesBindingSource, "Picture", true));
-            this.picturePictureBox.Location = new System.Drawing.Point(30, 313);
-            this.picturePictureBox.Name = "picturePictureBox";
-            this.picturePictureBox.Size = new System.Drawing.Size(171, 220);
-            this.picturePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePictureBox.TabIndex = 3;
-            this.picturePictureBox.TabStop = false;
-            // 
-            // linkLinkLabel
-            // 
-            this.linkLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Link", true));
-            this.linkLinkLabel.Location = new System.Drawing.Point(326, 439);
-            this.linkLinkLabel.Name = "linkLinkLabel";
-            this.linkLinkLabel.Size = new System.Drawing.Size(301, 23);
-            this.linkLinkLabel.TabIndex = 5;
-            this.linkLinkLabel.TabStop = true;
-            this.linkLinkLabel.Text = "linkLabel1";
-            this.linkLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLinkLabel_LinkClicked);
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(0, -3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1406, 665);
-            this.tabControl1.TabIndex = 15;
-            // 
-            // gamesBindingSource
-            // 
-            this.gamesBindingSource.DataMember = "Games";
-            this.gamesBindingSource.DataSource = this.steamDataSet;
-            // 
-            // steamDataSet
-            // 
-            this.steamDataSet.DataSetName = "SteamDataSet";
-            this.steamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -625,6 +593,30 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(553, 370);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
+            // 
+            // tagsDataGridView
+            // 
+            this.tagsDataGridView.AllowUserToAddRows = false;
+            this.tagsDataGridView.AutoGenerateColumns = false;
+            this.tagsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tagsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15});
+            this.tagsDataGridView.DataSource = this.tagsBindingSource;
+            this.tagsDataGridView.Location = new System.Drawing.Point(293, 75);
+            this.tagsDataGridView.Name = "tagsDataGridView";
+            this.tagsDataGridView.Size = new System.Drawing.Size(28, 220);
+            this.tagsDataGridView.TabIndex = 8;
+            this.tagsDataGridView.Visible = false;
+            // 
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
@@ -637,10 +629,30 @@
             this.dataGridViewTextBoxColumn15.HeaderText = "Name of tag";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
-            // tagsBindingSource
+            // name_of_gameLabel1
             // 
-            this.tagsBindingSource.DataMember = "Tags";
-            this.tagsBindingSource.DataSource = this.steamDataSet;
+            this.name_of_gameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Name of game", true));
+            this.name_of_gameLabel1.Location = new System.Drawing.Point(290, 416);
+            this.name_of_gameLabel1.Name = "name_of_gameLabel1";
+            this.name_of_gameLabel1.Size = new System.Drawing.Size(100, 23);
+            this.name_of_gameLabel1.TabIndex = 14;
+            this.name_of_gameLabel1.Text = "label4";
+            // 
+            // game_TagsDataGridView
+            // 
+            this.game_TagsDataGridView.AllowUserToAddRows = false;
+            this.game_TagsDataGridView.AllowUserToDeleteRows = false;
+            this.game_TagsDataGridView.AutoGenerateColumns = false;
+            this.game_TagsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.game_TagsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.game_TagsDataGridView.DataSource = this.game_TagsBindingSource;
+            this.game_TagsDataGridView.Location = new System.Drawing.Point(122, 30);
+            this.game_TagsDataGridView.Name = "game_TagsDataGridView";
+            this.game_TagsDataGridView.Size = new System.Drawing.Size(33, 220);
+            this.game_TagsDataGridView.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -665,22 +677,65 @@
             this.game_TagsBindingSource.DataMember = "Game_Tags";
             this.game_TagsBindingSource.DataSource = this.steamDataSet;
             // 
-            // genresBindingSource
+            // label3
             // 
-            this.genresBindingSource.DataMember = "Genres";
-            this.genresBindingSource.DataSource = this.steamDataSet;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(76, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "label3";
             // 
-            // dataGridViewTextBoxColumn16
+            // descriptionLabel1
             // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Айди жанра";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.descriptionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Description", true));
+            this.descriptionLabel1.Location = new System.Drawing.Point(760, 345);
+            this.descriptionLabel1.Name = "descriptionLabel1";
+            this.descriptionLabel1.Size = new System.Drawing.Size(124, 126);
+            this.descriptionLabel1.TabIndex = 13;
+            this.descriptionLabel1.Text = "label4";
+            this.descriptionLabel1.Click += new System.EventHandler(this.descriptionLabel1_Click);
             // 
-            // dataGridViewTextBoxColumn17
+            // label2
             // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Name_of_genre";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Название жанра";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(76, 150);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "label2";
+            // 
+            // picturePictureBox
+            // 
+            this.picturePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.gamesBindingSource, "Picture", true));
+            this.picturePictureBox.Location = new System.Drawing.Point(30, 313);
+            this.picturePictureBox.Name = "picturePictureBox";
+            this.picturePictureBox.Size = new System.Drawing.Size(171, 220);
+            this.picturePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePictureBox.TabIndex = 3;
+            this.picturePictureBox.TabStop = false;
+            // 
+            // linkLinkLabel
+            // 
+            this.linkLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Link", true));
+            this.linkLinkLabel.Location = new System.Drawing.Point(326, 439);
+            this.linkLinkLabel.Name = "linkLinkLabel";
+            this.linkLinkLabel.Size = new System.Drawing.Size(301, 23);
+            this.linkLinkLabel.TabIndex = 5;
+            this.linkLinkLabel.TabStop = true;
+            this.linkLinkLabel.Text = "linkLabel1";
+            this.linkLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLinkLabel_LinkClicked);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Location = new System.Drawing.Point(0, -3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1406, 665);
+            this.tabControl1.TabIndex = 15;
             // 
             // gamesTableAdapter
             // 
@@ -709,33 +764,334 @@
             // 
             this.genresTableAdapter.ClearBeforeFill = true;
             // 
-            // tagsDataGridView1
+            // groupBox2
             // 
-            this.tagsDataGridView1.AutoGenerateColumns = false;
-            this.tagsDataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
-            this.tagsDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tagsDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19});
-            this.tagsDataGridView1.DataSource = this.tagsBindingSource;
-            this.tagsDataGridView1.EnableHeadersVisualStyles = false;
-            this.tagsDataGridView1.GridColor = System.Drawing.Color.DarkGray;
-            this.tagsDataGridView1.Location = new System.Drawing.Point(27, 302);
-            this.tagsDataGridView1.Name = "tagsDataGridView1";
-            this.tagsDataGridView1.Size = new System.Drawing.Size(277, 292);
-            this.tagsDataGridView1.TabIndex = 2;
+            this.groupBox2.Controls.Add(label4);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.Location = new System.Drawing.Point(383, 302);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(425, 223);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Область редактирования таблицы \"Тэги\"";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(162, 51);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(85, 13);
+            label4.TabIndex = 3;
+            label4.Text = "Название тэги:";
+            label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tagsBindingSource, "Name of tag", true));
+            this.textBox1.Location = new System.Drawing.Point(157, 77);
+            this.textBox1.MaxLength = 30;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(107, 20);
+            this.textBox1.TabIndex = 4;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(25, 128);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(107, 51);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Редактировать строку";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(157, 128);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(107, 51);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Удалить строку";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(288, 128);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(107, 51);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Добавить строку";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // game_TagsDataGridView1
+            // 
+            this.game_TagsDataGridView1.AllowUserToAddRows = false;
+            this.game_TagsDataGridView1.AutoGenerateColumns = false;
+            this.game_TagsDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.game_TagsDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.gameIDDataGridViewTextBoxColumn,
+            this.tagIDDataGridViewTextBoxColumn});
+            this.game_TagsDataGridView1.DataSource = this.game_TagsBindingSource1;
+            this.game_TagsDataGridView1.Location = new System.Drawing.Point(865, 190);
+            this.game_TagsDataGridView1.Name = "game_TagsDataGridView1";
+            this.game_TagsDataGridView1.Size = new System.Drawing.Size(389, 220);
+            this.game_TagsDataGridView1.TabIndex = 5;
+            this.game_TagsDataGridView1.Visible = false;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // gameIDDataGridViewTextBoxColumn
+            // 
+            this.gameIDDataGridViewTextBoxColumn.DataPropertyName = "Game_ID";
+            this.gameIDDataGridViewTextBoxColumn.HeaderText = "Game_ID";
+            this.gameIDDataGridViewTextBoxColumn.Name = "gameIDDataGridViewTextBoxColumn";
+            // 
+            // tagIDDataGridViewTextBoxColumn
+            // 
+            this.tagIDDataGridViewTextBoxColumn.DataPropertyName = "Tag_ID";
+            this.tagIDDataGridViewTextBoxColumn.HeaderText = "Tag_ID";
+            this.tagIDDataGridViewTextBoxColumn.Name = "tagIDDataGridViewTextBoxColumn";
+            // 
+            // game_TagsBindingSource1
+            // 
+            this.game_TagsBindingSource1.DataMember = "Game_Tags";
+            this.game_TagsBindingSource1.DataSource = this.steamDataSet;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Номер жанра";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Name_of_genre";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Название жанра";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
             // dataGridViewTextBoxColumn18
             // 
             this.dataGridViewTextBoxColumn18.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn18.HeaderText = "id";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Номер тэга";
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
             // 
             // dataGridViewTextBoxColumn19
             // 
             this.dataGridViewTextBoxColumn19.DataPropertyName = "Name of tag";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Name of tag";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Название тэга";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // developerBindingSource
+            // 
+            this.developerBindingSource.DataMember = "Developer";
+            this.developerBindingSource.DataSource = this.steamDataSet;
+            // 
+            // developerTableAdapter
+            // 
+            this.developerTableAdapter.ClearBeforeFill = true;
+            // 
+            // developerDataGridView
+            // 
+            this.developerDataGridView.AllowUserToAddRows = false;
+            this.developerDataGridView.AutoGenerateColumns = false;
+            this.developerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
+            this.developerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.developerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25});
+            this.developerDataGridView.DataSource = this.developerBindingSource;
+            this.developerDataGridView.Location = new System.Drawing.Point(24, 28);
+            this.developerDataGridView.Name = "developerDataGridView";
+            this.developerDataGridView.Size = new System.Drawing.Size(972, 220);
+            this.developerDataGridView.TabIndex = 0;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn20.HeaderText = "id";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Name of developer";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Название компании разработчиков";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Founded";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Основана";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Founder";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Основатель";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Website";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Сайт";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Number of employees";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Кол-во работников";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(number_of_employeesLabel);
+            this.groupBox3.Controls.Add(this.number_of_employeesTextBox);
+            this.groupBox3.Controls.Add(websiteLabel);
+            this.groupBox3.Controls.Add(this.websiteTextBox);
+            this.groupBox3.Controls.Add(founderLabel);
+            this.groupBox3.Controls.Add(this.founderTextBox);
+            this.groupBox3.Controls.Add(foundedLabel);
+            this.groupBox3.Controls.Add(this.foundedDateTimePicker);
+            this.groupBox3.Controls.Add(name_of_developerLabel);
+            this.groupBox3.Controls.Add(this.name_of_developerTextBox);
+            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.button8);
+            this.groupBox3.Controls.Add(this.button9);
+            this.groupBox3.Location = new System.Drawing.Point(24, 276);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(475, 231);
+            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Область редактирования таблицы \"Разработчики\"";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(349, 166);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(107, 51);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "Редактировать строку";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(349, 92);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(107, 51);
+            this.button8.TabIndex = 2;
+            this.button8.Text = "Удалить строку";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(349, 19);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(107, 51);
+            this.button9.TabIndex = 1;
+            this.button9.Text = "Добавить строку";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // name_of_developerLabel
+            // 
+            name_of_developerLabel.AutoSize = true;
+            name_of_developerLabel.Location = new System.Drawing.Point(16, 32);
+            name_of_developerLabel.Name = "name_of_developerLabel";
+            name_of_developerLabel.Size = new System.Drawing.Size(192, 13);
+            name_of_developerLabel.TabIndex = 3;
+            name_of_developerLabel.Text = "Название компании разработчиков:";
+            // 
+            // name_of_developerTextBox
+            // 
+            this.name_of_developerTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.developerBindingSource, "Name of developer", true));
+            this.name_of_developerTextBox.Location = new System.Drawing.Point(214, 29);
+            this.name_of_developerTextBox.Name = "name_of_developerTextBox";
+            this.name_of_developerTextBox.Size = new System.Drawing.Size(100, 20);
+            this.name_of_developerTextBox.TabIndex = 4;
+            // 
+            // foundedLabel
+            // 
+            foundedLabel.AutoSize = true;
+            foundedLabel.Location = new System.Drawing.Point(16, 65);
+            foundedLabel.Name = "foundedLabel";
+            foundedLabel.Size = new System.Drawing.Size(60, 13);
+            foundedLabel.TabIndex = 5;
+            foundedLabel.Text = "Основана:";
+            // 
+            // foundedDateTimePicker
+            // 
+            this.foundedDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.developerBindingSource, "Founded", true));
+            this.foundedDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.foundedDateTimePicker.Location = new System.Drawing.Point(82, 65);
+            this.foundedDateTimePicker.Name = "foundedDateTimePicker";
+            this.foundedDateTimePicker.Size = new System.Drawing.Size(98, 20);
+            this.foundedDateTimePicker.TabIndex = 6;
+            // 
+            // founderLabel
+            // 
+            founderLabel.AutoSize = true;
+            founderLabel.Location = new System.Drawing.Point(16, 105);
+            founderLabel.Name = "founderLabel";
+            founderLabel.Size = new System.Drawing.Size(71, 13);
+            founderLabel.TabIndex = 7;
+            founderLabel.Text = "Основатель:";
+            // 
+            // founderTextBox
+            // 
+            this.founderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.developerBindingSource, "Founder", true));
+            this.founderTextBox.Location = new System.Drawing.Point(93, 102);
+            this.founderTextBox.Name = "founderTextBox";
+            this.founderTextBox.Size = new System.Drawing.Size(100, 20);
+            this.founderTextBox.TabIndex = 8;
+            // 
+            // websiteLabel
+            // 
+            websiteLabel.AutoSize = true;
+            websiteLabel.Location = new System.Drawing.Point(16, 139);
+            websiteLabel.Name = "websiteLabel";
+            websiteLabel.Size = new System.Drawing.Size(34, 13);
+            websiteLabel.TabIndex = 9;
+            websiteLabel.Text = "Сайт:";
+            // 
+            // websiteTextBox
+            // 
+            this.websiteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.developerBindingSource, "Website", true));
+            this.websiteTextBox.Location = new System.Drawing.Point(57, 136);
+            this.websiteTextBox.Name = "websiteTextBox";
+            this.websiteTextBox.Size = new System.Drawing.Size(150, 20);
+            this.websiteTextBox.TabIndex = 10;
+            // 
+            // number_of_employeesLabel
+            // 
+            number_of_employeesLabel.AutoSize = true;
+            number_of_employeesLabel.Location = new System.Drawing.Point(16, 175);
+            number_of_employeesLabel.Name = "number_of_employeesLabel";
+            number_of_employeesLabel.Size = new System.Drawing.Size(106, 13);
+            number_of_employeesLabel.TabIndex = 11;
+            number_of_employeesLabel.Text = "Кол-во работников:";
+            // 
+            // number_of_employeesTextBox
+            // 
+            this.number_of_employeesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.developerBindingSource, "Number of employees", true));
+            this.number_of_employeesTextBox.Location = new System.Drawing.Point(134, 172);
+            this.number_of_employeesTextBox.Name = "number_of_employeesTextBox";
+            this.number_of_employeesTextBox.Size = new System.Drawing.Size(100, 20);
+            this.number_of_employeesTextBox.TabIndex = 12;
             // 
             // Form3
             // 
@@ -750,25 +1106,34 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
             this.Load += new System.EventHandler(this.Form3_Load);
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.steamDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genresDataGridView)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gamesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.steamDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.developerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.developerDataGridView)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -792,8 +1157,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView genresDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
@@ -838,7 +1201,37 @@
         private System.Windows.Forms.LinkLabel linkLinkLabel;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.DataGridView tagsDataGridView1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridView game_TagsDataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gameIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tagIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource game_TagsBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.BindingSource developerBindingSource;
+        private SteamDataSetTableAdapters.DeveloperTableAdapter developerTableAdapter;
+        private System.Windows.Forms.DataGridView developerDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox number_of_employeesTextBox;
+        private System.Windows.Forms.TextBox websiteTextBox;
+        private System.Windows.Forms.TextBox founderTextBox;
+        private System.Windows.Forms.DateTimePicker foundedDateTimePicker;
+        private System.Windows.Forms.TextBox name_of_developerTextBox;
     }
 }
