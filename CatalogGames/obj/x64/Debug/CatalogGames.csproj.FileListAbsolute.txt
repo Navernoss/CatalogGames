@@ -131,4 +131,3 @@ E:\CatalogGames\CatalogGames\obj\x64\Debug\CatalogGames.csproj.CoreCompileInputs
 E:\CatalogGames\CatalogGames\obj\x64\Debug\CatalogG.7414FACD.Up2Date
 E:\CatalogGames\CatalogGames\obj\x64\Debug\CatalogGames.exe
 E:\CatalogGames\CatalogGames\obj\x64\Debug\CatalogGames.pdb
-D:\CatalogGames\CatalogGames\obj\x64\Debug\CatalogGames.exe.config
