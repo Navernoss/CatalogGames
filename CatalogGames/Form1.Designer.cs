@@ -66,11 +66,13 @@
             // 
             // textBoxlogin
             // 
+            this.textBoxlogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
             resources.ApplyResources(this.textBoxlogin, "textBoxlogin");
             this.textBoxlogin.Name = "textBoxlogin";
             // 
             // textBoxpassword
             // 
+            this.textBoxpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
             resources.ApplyResources(this.textBoxpassword, "textBoxpassword");
             this.textBoxpassword.Name = "textBoxpassword";
             // 

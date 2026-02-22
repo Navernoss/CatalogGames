@@ -51,42 +51,38 @@ namespace CatalogGames
             this.game_TagsTableAdapter.Fill(this.steamDataSet.Game_Tags);
             // TODO: This line of code loads data into the 'steamDataSet.Games' table. You can move, or remove it, as needed.
             this.gamesTableAdapter.Fill(this.steamDataSet.Games);
-            genresDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(88, 127, 219);
-            genresDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
-            genresDataGridView.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#829FE4");
-            genresDataGridView.DefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
-            genresDataGridView.EnableHeadersVisualStyles = false;
-            genresDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12f, FontStyle.Bold);
-            genresDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            genresDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            genresDataGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
-            tagsDataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(88, 127, 219);
-            tagsDataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
-            tagsDataGridView1.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#829FE4");
-            tagsDataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
-            tagsDataGridView1.EnableHeadersVisualStyles = false;
-            tagsDataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12f, FontStyle.Bold);
-            tagsDataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            tagsDataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tagsDataGridView1.EditMode = DataGridViewEditMode.EditProgrammatically;
-            developerDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(88, 127, 219);
-            developerDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
-            developerDataGridView.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#829FE4");
-            developerDataGridView.DefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
-            developerDataGridView.EnableHeadersVisualStyles = false;
-            developerDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12f, FontStyle.Bold);
-            developerDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            developerDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            developerDataGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
             System.Windows.Forms.Button[] buttons = { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
-
             foreach (System.Windows.Forms.Button btn in buttons)
             {
                 btn.BackColor = ColorTranslator.FromHtml("#829FE4");
                 btn.ForeColor = Color.FromArgb(44, 41, 227);
                 btn.Font = new Font("Arial",8f);
             }
+            System.Windows.Forms.DataGridView[] datagrid = { genresDataGridView, tagsDataGridView1,developerDataGridView, gamesDataGridView };
+            foreach (System.Windows.Forms.DataGridView dgv in datagrid)
+            {
+                dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(88, 127, 219);
+                dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
+                dgv.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#829FE4");
+                dgv.DefaultCellStyle.ForeColor = Color.FromArgb(44, 41, 227);
+                dgv.EnableHeadersVisualStyles = false;
+                dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12f, FontStyle.Bold);
+                dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
+            }
+            System.Windows.Forms.Label[] labels = { labeltags, labelgenre, labelnamedev, foundedLabel, founderLabel, websiteLabel, number_of_employeesLabel };
+            foreach (System.Windows.Forms.Label l in labels)
+            {
+                l.Font = new Font("Arial", 8.25f);
+                l.ForeColor = Color.FromArgb(44, 41, 227);
+            }
+            txtDate.ForeColor = Color.FromArgb(44, 41, 227);
+            txtDate.BackColor = Color.White;
+            txtDate.ReadOnly = true;
 
+            monthCalendar1.Visible = false;
+            monthCalendar1.MaxSelectionCount = 1;
         }
 
         private void linkLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -98,22 +94,6 @@ namespace CatalogGames
         {
             int index = e.RowIndex;
 
-        }
-
-        private void gamesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //label1.Text = "";
-            //int game_id = int.Parse(gamesDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString());
-            //string tags = "";
-            //game_TagsBindingSource.Filter = "Game_ID = " + game_id;
-            //for (int i = 0; i < game_TagsDataGridView.Rows.Count; i++) {
-            //    for (int j = 0; j < tagsDataGridView.Rows.Count; j++) {
-            //        if (game_TagsDataGridView.Rows[i].Cells[2].Value.ToString() == tagsDataGridView.Rows[j].Cells[0].Value.ToString()) {
-            //            tags += tagsDataGridView.Rows[j].Cells[1].Value + " ";
-            //        }
-            //    }
-            //}
-            //label1.Text = tags;
         }
 
         private void gamesDataGridView_SelectionChanged(object sender, EventArgs e)
@@ -144,22 +124,7 @@ namespace CatalogGames
             f1.Close();
         }
 
-        private void descriptionLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gamesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
 
         }
@@ -183,16 +148,6 @@ namespace CatalogGames
                 MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
             }
             genresTableAdapter.Update(steamDataSet);
-        }
-
-        private void name_of_genreLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void name_of_genreTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -358,20 +313,20 @@ namespace CatalogGames
                 }
                 if (error == false)
                 {
-                    DataRow newRow = steamDataSet.Developer.NewRow();
-                    newRow[1] = name_of_developerTextBox.Text;
-                    newRow[2] = foundedDateTimePicker.Text;
-                    newRow[3] = founderTextBox.Text;
-                    newRow[4] = websiteTextBox.Text;
-                    newRow[5] = number_of_employeesTextBox.Text;
-                    steamDataSet.Developer.Rows.Add(newRow);
-                    developerTableAdapter.Update(steamDataSet);
-                    name_of_genreTextBox.Text = "";
-                    name_of_developerTextBox.Text = "";
-                    foundedDateTimePicker.Text = "";
-                    founderTextBox.Text = "";
-                    websiteTextBox.Text = "";
-                    number_of_employeesTextBox.Text = "";
+                    //DataRow newRow = steamDataSet.Developer.NewRow();
+                    //newRow[1] = name_of_developerTextBox.Text;
+                    //newRow[2] = foundedDateTimePicker.Text;
+                    //newRow[3] = founderTextBox.Text;
+                    //newRow[4] = websiteTextBox.Text;
+                    //newRow[5] = number_of_employeesTextBox.Text;
+                    //steamDataSet.Developer.Rows.Add(newRow);
+                    //developerTableAdapter.Update(steamDataSet);
+                    //name_of_genreTextBox.Text = "";
+                    //name_of_developerTextBox.Text = "";
+                    //foundedDateTimePicker.Text = "";
+                    //founderTextBox.Text = "";
+                    //websiteTextBox.Text = "";
+                    //number_of_employeesTextBox.Text = "";
                 }
             }
         }
@@ -399,12 +354,12 @@ namespace CatalogGames
                     {
                         foreach (DataGridViewRow row in developerDataGridView.SelectedRows)
                         {
-                            developerDataGridView.Rows.Remove(row);
-                            name_of_developerTextBox.Text = "";
-                            foundedDateTimePicker.Text = "";
-                            founderTextBox.Text = "";
-                            websiteTextBox.Text = "";
-                            number_of_employeesTextBox.Text = "";
+                            //developerDataGridView.Rows.Remove(row);
+                            //name_of_developerTextBox.Text = "";
+                            //foundedDateTimePicker.Text = "";
+                            //founderTextBox.Text = "";
+                            //websiteTextBox.Text = "";
+                            //number_of_employeesTextBox.Text = "";
                         }
                         developerTableAdapter.Update(steamDataSet);
                     }
@@ -414,26 +369,38 @@ namespace CatalogGames
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (name_of_developerTextBox.Text != "" &&
-            foundedDateTimePicker.Text != "" &&
-            founderTextBox.Text != "" &&
-            websiteTextBox.Text != "" &&
-            number_of_employeesTextBox.Text != "")
-            {
-                int id = developerDataGridView.CurrentRow.Index;
-                developerDataGridView.Rows[id].Cells[1].Value = name_of_developerTextBox.Text;
-                developerDataGridView.Rows[id].Cells[2].Value = foundedDateTimePicker.Text;
-                developerDataGridView.Rows[id].Cells[3].Value = founderTextBox.Text;
-                developerDataGridView.Rows[id].Cells[4].Value = websiteTextBox.Text;
-                developerDataGridView.Rows[id].Cells[5].Value = number_of_employeesTextBox.Text;
-                developerTableAdapter.Update(steamDataSet);
-                developerDataGridView.DataSource = developerBindingSource;
-            }
-            else
-            {
-                MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
-            }
-            developerTableAdapter.Update(steamDataSet);
+            //if (name_of_developerTextBox.Text != "" &&
+            //foundedDateTimePicker.Text != "" &&
+            //founderTextBox.Text != "" &&
+            //websiteTextBox.Text != "" &&
+            //number_of_employeesTextBox.Text != "")
+            //{
+            //    int id = developerDataGridView.CurrentRow.Index;
+            //    developerDataGridView.Rows[id].Cells[1].Value = name_of_developerTextBox.Text;
+            //    developerDataGridView.Rows[id].Cells[2].Value = foundedDateTimePicker.Text;
+            //    developerDataGridView.Rows[id].Cells[3].Value = founderTextBox.Text;
+            //    developerDataGridView.Rows[id].Cells[4].Value = websiteTextBox.Text;
+            //    developerDataGridView.Rows[id].Cells[5].Value = number_of_employeesTextBox.Text;
+            //    developerTableAdapter.Update(steamDataSet);
+            //    developerDataGridView.DataSource = developerBindingSource;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
+            //}
+            //developerTableAdapter.Update(steamDataSet);
+        }
+
+        private void btnCalendar_Click(object sender, EventArgs e)
+        {
+            monthCalendar1.Location = new Point(txtDate.Left, txtDate.Bottom);
+            monthCalendar1.Visible = !monthCalendar1.Visible;
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            txtDate.Text = e.Start.ToString("dd.MM.yyyy");
+            monthCalendar1.Visible = false;
         }
     }
 }
