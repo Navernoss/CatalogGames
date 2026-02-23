@@ -41,6 +41,7 @@
             this.game_TagsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.steamDataSet = new CatalogGames.SteamDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labeltags = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button4 = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelgenre = new System.Windows.Forms.Label();
             this.name_of_genreTextBox = new System.Windows.Forms.TextBox();
             this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button3 = new System.Windows.Forms.Button();
@@ -60,8 +62,16 @@
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn = new System.Windows.Forms.GroupBox();
-            this.number_of_employeesTextBox = new System.Windows.Forms.TextBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.btnCalendar = new System.Windows.Forms.Button();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.developerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.number_of_employeesLabel = new System.Windows.Forms.Label();
+            this.websiteLabel = new System.Windows.Forms.Label();
+            this.founderLabel = new System.Windows.Forms.Label();
+            this.foundedLabel = new System.Windows.Forms.Label();
+            this.labelnamedev = new System.Windows.Forms.Label();
+            this.number_of_employeesTextBox = new System.Windows.Forms.TextBox();
             this.websiteTextBox = new System.Windows.Forms.TextBox();
             this.founderTextBox = new System.Windows.Forms.TextBox();
             this.name_of_developerTextBox = new System.Windows.Forms.TextBox();
@@ -113,28 +123,29 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.game_TagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label3 = new System.Windows.Forms.Label();
             this.descriptionLabel1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.picturePictureBox = new System.Windows.Forms.PictureBox();
             this.linkLinkLabel = new System.Windows.Forms.LinkLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.cabinet = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.gamesTableAdapter = new CatalogGames.SteamDataSetTableAdapters.GamesTableAdapter();
             this.tableAdapterManager = new CatalogGames.SteamDataSetTableAdapters.TableAdapterManager();
             this.game_TagsTableAdapter = new CatalogGames.SteamDataSetTableAdapters.Game_TagsTableAdapter();
             this.tagsTableAdapter = new CatalogGames.SteamDataSetTableAdapters.TagsTableAdapter();
             this.genresTableAdapter = new CatalogGames.SteamDataSetTableAdapters.GenresTableAdapter();
             this.developerTableAdapter = new CatalogGames.SteamDataSetTableAdapters.DeveloperTableAdapter();
-            this.labeltags = new System.Windows.Forms.Label();
-            this.labelgenre = new System.Windows.Forms.Label();
-            this.labelnamedev = new System.Windows.Forms.Label();
-            this.foundedLabel = new System.Windows.Forms.Label();
-            this.founderLabel = new System.Windows.Forms.Label();
-            this.websiteLabel = new System.Windows.Forms.Label();
-            this.number_of_employeesLabel = new System.Windows.Forms.Label();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.btnCalendar = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new CatalogGames.SteamDataSetTableAdapters.UsersTableAdapter();
+            this.usersDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             linkLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             name_of_gameLabel = new System.Windows.Forms.Label();
@@ -162,6 +173,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.cabinet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // linkLabel
@@ -258,12 +272,22 @@
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button6);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
             this.groupBox2.Location = new System.Drawing.Point(383, 302);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(425, 223);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Область редактирования таблицы \"Тэги\"";
+            // 
+            // labeltags
+            // 
+            this.labeltags.AutoSize = true;
+            this.labeltags.Location = new System.Drawing.Point(154, 61);
+            this.labeltags.Name = "labeltags";
+            this.labeltags.Size = new System.Drawing.Size(85, 13);
+            this.labeltags.TabIndex = 5;
+            this.labeltags.Text = "Название тэга:";
             // 
             // textBox1
             // 
@@ -345,12 +369,22 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
             this.groupBox1.Location = new System.Drawing.Point(383, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(425, 223);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Область редактирования таблицы \"Жанры\"";
+            // 
+            // labelgenre
+            // 
+            this.labelgenre.AutoSize = true;
+            this.labelgenre.Location = new System.Drawing.Point(154, 61);
+            this.labelgenre.Name = "labelgenre";
+            this.labelgenre.Size = new System.Drawing.Size(95, 13);
+            this.labelgenre.TabIndex = 5;
+            this.labelgenre.Text = "Название жанра:";
             // 
             // name_of_genreTextBox
             // 
@@ -456,12 +490,92 @@
             this.btn.Controls.Add(this.button7);
             this.btn.Controls.Add(this.button8);
             this.btn.Controls.Add(this.button9);
+            this.btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
             this.btn.Location = new System.Drawing.Point(24, 276);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(475, 259);
             this.btn.TabIndex = 16;
             this.btn.TabStop = false;
             this.btn.Text = "Область редактирования таблицы \"Разработчики\"";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(219, 63);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 20;
+            this.monthCalendar1.Visible = false;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // btnCalendar
+            // 
+            this.btnCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
+            this.btnCalendar.Location = new System.Drawing.Point(189, 63);
+            this.btnCalendar.Name = "btnCalendar";
+            this.btnCalendar.Size = new System.Drawing.Size(29, 23);
+            this.btnCalendar.TabIndex = 19;
+            this.btnCalendar.Text = "📅";
+            this.btnCalendar.UseVisualStyleBackColor = true;
+            this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
+            // 
+            // txtDate
+            // 
+            this.txtDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.developerBindingSource, "Founded", true));
+            this.txtDate.Location = new System.Drawing.Point(83, 65);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(100, 20);
+            this.txtDate.TabIndex = 18;
+            this.txtDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDate_KeyPress);
+            // 
+            // developerBindingSource
+            // 
+            this.developerBindingSource.DataMember = "Developer";
+            this.developerBindingSource.DataSource = this.steamDataSet;
+            // 
+            // number_of_employeesLabel
+            // 
+            this.number_of_employeesLabel.AutoSize = true;
+            this.number_of_employeesLabel.Location = new System.Drawing.Point(16, 175);
+            this.number_of_employeesLabel.Name = "number_of_employeesLabel";
+            this.number_of_employeesLabel.Size = new System.Drawing.Size(106, 13);
+            this.number_of_employeesLabel.TabIndex = 17;
+            this.number_of_employeesLabel.Text = "Кол-во работников:";
+            // 
+            // websiteLabel
+            // 
+            this.websiteLabel.AutoSize = true;
+            this.websiteLabel.Location = new System.Drawing.Point(16, 139);
+            this.websiteLabel.Name = "websiteLabel";
+            this.websiteLabel.Size = new System.Drawing.Size(34, 13);
+            this.websiteLabel.TabIndex = 16;
+            this.websiteLabel.Text = "Сайт:";
+            // 
+            // founderLabel
+            // 
+            this.founderLabel.AutoSize = true;
+            this.founderLabel.Location = new System.Drawing.Point(16, 105);
+            this.founderLabel.Name = "founderLabel";
+            this.founderLabel.Size = new System.Drawing.Size(71, 13);
+            this.founderLabel.TabIndex = 15;
+            this.founderLabel.Text = "Основатель:";
+            // 
+            // foundedLabel
+            // 
+            this.foundedLabel.AutoSize = true;
+            this.foundedLabel.Location = new System.Drawing.Point(16, 65);
+            this.foundedLabel.Name = "foundedLabel";
+            this.foundedLabel.Size = new System.Drawing.Size(60, 13);
+            this.foundedLabel.TabIndex = 14;
+            this.foundedLabel.Text = "Основана:";
+            // 
+            // labelnamedev
+            // 
+            this.labelnamedev.AutoSize = true;
+            this.labelnamedev.Location = new System.Drawing.Point(16, 32);
+            this.labelnamedev.Name = "labelnamedev";
+            this.labelnamedev.Size = new System.Drawing.Size(192, 13);
+            this.labelnamedev.TabIndex = 13;
+            this.labelnamedev.Text = "Название компании разработчиков:";
             // 
             // number_of_employeesTextBox
             // 
@@ -471,11 +585,6 @@
             this.number_of_employeesTextBox.Name = "number_of_employeesTextBox";
             this.number_of_employeesTextBox.Size = new System.Drawing.Size(100, 20);
             this.number_of_employeesTextBox.TabIndex = 12;
-            // 
-            // developerBindingSource
-            // 
-            this.developerBindingSource.DataMember = "Developer";
-            this.developerBindingSource.DataSource = this.steamDataSet;
             // 
             // websiteTextBox
             // 
@@ -601,9 +710,7 @@
             this.tabPage1.Controls.Add(this.name_of_gameLabel1);
             this.tabPage1.Controls.Add(this.game_TagsDataGridView);
             this.tabPage1.Controls.Add(descriptionLabel);
-            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.descriptionLabel1);
-            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.picturePictureBox);
             this.tabPage1.Controls.Add(linkLabel);
             this.tabPage1.Controls.Add(this.linkLinkLabel);
@@ -927,15 +1034,6 @@
             this.game_TagsBindingSource.DataMember = "Game_Tags";
             this.game_TagsBindingSource.DataSource = this.steamDataSet;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "label3";
-            // 
             // descriptionLabel1
             // 
             this.descriptionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Description", true));
@@ -944,15 +1042,6 @@
             this.descriptionLabel1.Size = new System.Drawing.Size(124, 126);
             this.descriptionLabel1.TabIndex = 13;
             this.descriptionLabel1.Text = "label4";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
             // 
             // picturePictureBox
             // 
@@ -980,11 +1069,72 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.cabinet);
             this.tabControl1.Location = new System.Drawing.Point(0, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1406, 665);
             this.tabControl1.TabIndex = 15;
+            // 
+            // cabinet
+            // 
+            this.cabinet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
+            this.cabinet.Controls.Add(this.usersDataGridView);
+            this.cabinet.Controls.Add(this.label6);
+            this.cabinet.Controls.Add(this.label3);
+            this.cabinet.Controls.Add(this.label2);
+            this.cabinet.Controls.Add(this.label5);
+            this.cabinet.Controls.Add(this.label4);
+            this.cabinet.ForeColor = System.Drawing.Color.Black;
+            this.cabinet.Location = new System.Drawing.Point(4, 22);
+            this.cabinet.Name = "cabinet";
+            this.cabinet.Size = new System.Drawing.Size(1398, 639);
+            this.cabinet.TabIndex = 4;
+            this.cabinet.Text = "Личный кабинет";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
+            this.label3.Location = new System.Drawing.Point(224, 88);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 22);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
+            this.label2.Location = new System.Drawing.Point(115, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 24);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "label2";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
+            this.label5.Location = new System.Drawing.Point(34, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(184, 24);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Уровень доступа:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
+            this.label4.Location = new System.Drawing.Point(34, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Логин:";
             // 
             // gamesTableAdapter
             // 
@@ -1017,93 +1167,64 @@
             // 
             this.developerTableAdapter.ClearBeforeFill = true;
             // 
-            // labeltags
+            // label6
             // 
-            this.labeltags.AutoSize = true;
-            this.labeltags.Location = new System.Drawing.Point(154, 61);
-            this.labeltags.Name = "labeltags";
-            this.labeltags.Size = new System.Drawing.Size(85, 13);
-            this.labeltags.TabIndex = 5;
-            this.labeltags.Text = "Название тэга:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(227)))));
+            this.label6.Location = new System.Drawing.Point(34, 131);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(184, 24);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Уровень доступа:";
             // 
-            // labelgenre
+            // usersBindingSource
             // 
-            this.labelgenre.AutoSize = true;
-            this.labelgenre.Location = new System.Drawing.Point(154, 61);
-            this.labelgenre.Name = "labelgenre";
-            this.labelgenre.Size = new System.Drawing.Size(95, 13);
-            this.labelgenre.TabIndex = 5;
-            this.labelgenre.Text = "Название жанра:";
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.steamDataSet;
             // 
-            // labelnamedev
+            // usersTableAdapter
             // 
-            this.labelnamedev.AutoSize = true;
-            this.labelnamedev.Location = new System.Drawing.Point(16, 32);
-            this.labelnamedev.Name = "labelnamedev";
-            this.labelnamedev.Size = new System.Drawing.Size(192, 13);
-            this.labelnamedev.TabIndex = 13;
-            this.labelnamedev.Text = "Название компании разработчиков:";
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // foundedLabel
+            // usersDataGridView
             // 
-            this.foundedLabel.AutoSize = true;
-            this.foundedLabel.Location = new System.Drawing.Point(16, 65);
-            this.foundedLabel.Name = "foundedLabel";
-            this.foundedLabel.Size = new System.Drawing.Size(60, 13);
-            this.foundedLabel.TabIndex = 14;
-            this.foundedLabel.Text = "Основана:";
+            this.usersDataGridView.AutoGenerateColumns = false;
+            this.usersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.usersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29});
+            this.usersDataGridView.DataSource = this.usersBindingSource;
+            this.usersDataGridView.Location = new System.Drawing.Point(848, 47);
+            this.usersDataGridView.Name = "usersDataGridView";
+            this.usersDataGridView.Size = new System.Drawing.Size(449, 220);
+            this.usersDataGridView.TabIndex = 18;
             // 
-            // founderLabel
+            // dataGridViewTextBoxColumn26
             // 
-            this.founderLabel.AutoSize = true;
-            this.founderLabel.Location = new System.Drawing.Point(16, 105);
-            this.founderLabel.Name = "founderLabel";
-            this.founderLabel.Size = new System.Drawing.Size(71, 13);
-            this.founderLabel.TabIndex = 15;
-            this.founderLabel.Text = "Основатель:";
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn26.HeaderText = "id";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             // 
-            // websiteLabel
+            // dataGridViewTextBoxColumn27
             // 
-            this.websiteLabel.AutoSize = true;
-            this.websiteLabel.Location = new System.Drawing.Point(16, 139);
-            this.websiteLabel.Name = "websiteLabel";
-            this.websiteLabel.Size = new System.Drawing.Size(34, 13);
-            this.websiteLabel.TabIndex = 16;
-            this.websiteLabel.Text = "Сайт:";
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "login";
+            this.dataGridViewTextBoxColumn27.HeaderText = "login";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
             // 
-            // number_of_employeesLabel
+            // dataGridViewTextBoxColumn28
             // 
-            this.number_of_employeesLabel.AutoSize = true;
-            this.number_of_employeesLabel.Location = new System.Drawing.Point(16, 175);
-            this.number_of_employeesLabel.Name = "number_of_employeesLabel";
-            this.number_of_employeesLabel.Size = new System.Drawing.Size(106, 13);
-            this.number_of_employeesLabel.TabIndex = 17;
-            this.number_of_employeesLabel.Text = "Кол-во работников:";
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "password";
+            this.dataGridViewTextBoxColumn28.HeaderText = "password";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
             // 
-            // txtDate
+            // dataGridViewTextBoxColumn29
             // 
-            this.txtDate.Location = new System.Drawing.Point(83, 65);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(100, 20);
-            this.txtDate.TabIndex = 18;
-            // 
-            // btnCalendar
-            // 
-            this.btnCalendar.Location = new System.Drawing.Point(189, 63);
-            this.btnCalendar.Name = "btnCalendar";
-            this.btnCalendar.Size = new System.Drawing.Size(29, 23);
-            this.btnCalendar.TabIndex = 19;
-            this.btnCalendar.Text = "button10";
-            this.btnCalendar.UseVisualStyleBackColor = true;
-            this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(229, 61);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 20;
-            this.monthCalendar1.Visible = false;
-            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "level of access";
+            this.dataGridViewTextBoxColumn29.HeaderText = "level of access";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
             // 
             // Form3
             // 
@@ -1146,6 +1267,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.cabinet.ResumeLayout(false);
+            this.cabinet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1206,9 +1331,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label descriptionLabel1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picturePictureBox;
         private System.Windows.Forms.LinkLabel linkLinkLabel;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1254,5 +1377,18 @@
         private System.Windows.Forms.Button btnCalendar;
         private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.TabPage cabinet;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private SteamDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.DataGridView usersDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
     }
 }

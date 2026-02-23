@@ -28,7 +28,22 @@ namespace CatalogGames
         public void SetUserData(string login, int level)
         {
             label2.Text = login;
-            label3.Text = level.ToString();
+            if (level == 0)
+            {
+                label3.Text = "Пользователь";
+                label6.Text = "Разрешения:\n" +
+                    " - Просматривать таблицы";
+            }
+            else {
+                label3.Text = "Администратор";
+                label6.Text = "Разрешения:\n" +
+                    " - Просматривать таблицы\n" +
+                    " - Добавлять данные в таблицы\n" +
+                    " - Редактировать данные в таблицах\n" +
+                    " - Удалять данные из таблиц\n";
+            }
+            
+            
         }
 
         private void gamesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -41,6 +56,8 @@ namespace CatalogGames
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'steamDataSet.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.steamDataSet.Users);
             // TODO: This line of code loads data into the 'steamDataSet.Developer' table. You can move, or remove it, as needed.
             this.developerTableAdapter.Fill(this.steamDataSet.Developer);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "steamDataSet.Genres". При необходимости она может быть перемещена или удалена.
@@ -58,7 +75,7 @@ namespace CatalogGames
                 btn.ForeColor = Color.FromArgb(44, 41, 227);
                 btn.Font = new Font("Arial",8f);
             }
-            System.Windows.Forms.DataGridView[] datagrid = { genresDataGridView, tagsDataGridView1,developerDataGridView, gamesDataGridView };
+            System.Windows.Forms.DataGridView[] datagrid = { genresDataGridView, tagsDataGridView1,developerDataGridView, gamesDataGridView, usersDataGridView };
             foreach (System.Windows.Forms.DataGridView dgv in datagrid)
             {
                 dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(88, 127, 219);
@@ -83,6 +100,7 @@ namespace CatalogGames
 
             monthCalendar1.Visible = false;
             monthCalendar1.MaxSelectionCount = 1;
+            developerDataGridView.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
         private void linkLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -98,24 +116,7 @@ namespace CatalogGames
 
         private void gamesDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (gamesDataGridView.SelectedRows.Count > 0)
-            {
-                label1.Text = "";
-                int game_id = int.Parse(gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells[0].Value.ToString());
-                string tags = "";
-                game_TagsBindingSource.Filter = "Game_ID = " + game_id;
-                for (int i = 0; i < game_TagsDataGridView.Rows.Count; i++)
-                {
-                    for (int j = 0; j < tagsDataGridView.Rows.Count; j++)
-                    {
-                        if (game_TagsDataGridView.Rows[i].Cells[2].Value.ToString() == tagsDataGridView.Rows[j].Cells[0].Value.ToString())
-                        {
-                            tags += tagsDataGridView.Rows[j].Cells[1].Value + " ";
-                        }
-                    }
-                }
-                label1.Text = tags;
-            }
+
         }
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
@@ -313,26 +314,22 @@ namespace CatalogGames
                 }
                 if (error == false)
                 {
-                    //DataRow newRow = steamDataSet.Developer.NewRow();
-                    //newRow[1] = name_of_developerTextBox.Text;
-                    //newRow[2] = foundedDateTimePicker.Text;
-                    //newRow[3] = founderTextBox.Text;
-                    //newRow[4] = websiteTextBox.Text;
-                    //newRow[5] = number_of_employeesTextBox.Text;
-                    //steamDataSet.Developer.Rows.Add(newRow);
-                    //developerTableAdapter.Update(steamDataSet);
-                    //name_of_genreTextBox.Text = "";
-                    //name_of_developerTextBox.Text = "";
-                    //foundedDateTimePicker.Text = "";
-                    //founderTextBox.Text = "";
-                    //websiteTextBox.Text = "";
-                    //number_of_employeesTextBox.Text = "";
+                    DataRow newRow = steamDataSet.Developer.NewRow();
+                    newRow[1] = name_of_developerTextBox.Text;
+                    newRow[2] = txtDate.Text;
+                    newRow[3] = founderTextBox.Text;
+                    newRow[4] = websiteTextBox.Text;
+                    newRow[5] = number_of_employeesTextBox.Text;
+                    steamDataSet.Developer.Rows.Add(newRow);
+                    developerTableAdapter.Update(steamDataSet);
+                    developerDataGridView.ClearSelection();
                 }
             }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            developerTableAdapter.Update(steamDataSet.Developer);
             if (name_of_developerTextBox.Text != "" && developerDataGridView.CurrentRow.Index != -1)
             {
                 bool error = false;
@@ -354,14 +351,14 @@ namespace CatalogGames
                     {
                         foreach (DataGridViewRow row in developerDataGridView.SelectedRows)
                         {
-                            //developerDataGridView.Rows.Remove(row);
-                            //name_of_developerTextBox.Text = "";
-                            //foundedDateTimePicker.Text = "";
-                            //founderTextBox.Text = "";
-                            //websiteTextBox.Text = "";
-                            //number_of_employeesTextBox.Text = "";
+                            developerDataGridView.Rows.Remove(row);
                         }
-                        developerTableAdapter.Update(steamDataSet);
+                        developerTableAdapter.Update(steamDataSet.Developer);
+                        developerDataGridView.ClearSelection();
+                        int lastIndex = developerDataGridView.Rows.Count - 1;
+                        developerDataGridView.Rows[lastIndex].Selected = true;
+                        developerDataGridView.CurrentCell = developerDataGridView.Rows[lastIndex].Cells[0];
+
                     }
                 }
             }
@@ -369,26 +366,27 @@ namespace CatalogGames
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //if (name_of_developerTextBox.Text != "" &&
-            //foundedDateTimePicker.Text != "" &&
-            //founderTextBox.Text != "" &&
-            //websiteTextBox.Text != "" &&
-            //number_of_employeesTextBox.Text != "")
-            //{
-            //    int id = developerDataGridView.CurrentRow.Index;
-            //    developerDataGridView.Rows[id].Cells[1].Value = name_of_developerTextBox.Text;
-            //    developerDataGridView.Rows[id].Cells[2].Value = foundedDateTimePicker.Text;
-            //    developerDataGridView.Rows[id].Cells[3].Value = founderTextBox.Text;
-            //    developerDataGridView.Rows[id].Cells[4].Value = websiteTextBox.Text;
-            //    developerDataGridView.Rows[id].Cells[5].Value = number_of_employeesTextBox.Text;
-            //    developerTableAdapter.Update(steamDataSet);
-            //    developerDataGridView.DataSource = developerBindingSource;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
-            //}
-            //developerTableAdapter.Update(steamDataSet);
+            if (name_of_developerTextBox.Text != "" &&
+            txtDate.Text != "" &&
+            founderTextBox.Text != "" &&
+            websiteTextBox.Text != "" &&
+            number_of_employeesTextBox.Text != "")
+            {
+                int id = developerDataGridView.CurrentRow.Index;
+                developerDataGridView.Rows[id].Cells[1].Value = name_of_developerTextBox.Text;
+                var date = DateTime.Parse(txtDate.Text);
+                developerDataGridView.Rows[id].Cells[2].Value = date;
+                developerDataGridView.Rows[id].Cells[3].Value = founderTextBox.Text;
+                developerDataGridView.Rows[id].Cells[4].Value = websiteTextBox.Text;
+                developerDataGridView.Rows[id].Cells[5].Value = number_of_employeesTextBox.Text;
+                developerTableAdapter.Update(steamDataSet);
+                developerDataGridView.DataSource = developerBindingSource;
+            }
+            else
+            {
+                MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
+            }
+            developerTableAdapter.Update(steamDataSet);
         }
 
         private void btnCalendar_Click(object sender, EventArgs e)
@@ -399,8 +397,13 @@ namespace CatalogGames
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {
-            txtDate.Text = e.Start.ToString("dd.MM.yyyy");
+            txtDate.Text = e.Start.ToString("dd/MM/yyyy");
             monthCalendar1.Visible = false;
+        }
+
+        private void txtDate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
