@@ -24,15 +24,23 @@ namespace CatalogGames
             gamesDataGridView.MultiSelect = false;
             f1 = form1;
         }
+        string user;
+        
 
         public void SetUserData(string login, int level)
         {
+            user = login;
             label2.Text = login;
             if (level == 0)
             {
                 label3.Text = "Пользователь";
                 label6.Text = "Разрешения:\n" +
                     " - Просматривать таблицы";
+                groupBox1.Visible = false;
+                groupBox2.Visible = false;
+                groupBox3.Visible = false;
+                groupBox4.Visible = false;
+                usersDataGridView.Visible = false;
             }
             else {
                 label3.Text = "Администратор";
@@ -41,6 +49,11 @@ namespace CatalogGames
                     " - Добавлять данные в таблицы\n" +
                     " - Редактировать данные в таблицах\n" +
                     " - Удалять данные из таблиц\n";
+                groupBox1.Visible = true;
+                groupBox2.Visible = true;
+                groupBox3.Visible = true;
+                groupBox4.Visible = true;
+                usersDataGridView.Visible = true;
             }
             
             
@@ -68,7 +81,7 @@ namespace CatalogGames
             this.game_TagsTableAdapter.Fill(this.steamDataSet.Game_Tags);
             // TODO: This line of code loads data into the 'steamDataSet.Games' table. You can move, or remove it, as needed.
             this.gamesTableAdapter.Fill(this.steamDataSet.Games);
-            System.Windows.Forms.Button[] buttons = { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
+            System.Windows.Forms.Button[] buttons = { button1, button2, button3, button4, button5, button6, button7, button8, button9, button10,button11,button12, button13, button14 };
             foreach (System.Windows.Forms.Button btn in buttons)
             {
                 btn.BackColor = ColorTranslator.FromHtml("#829FE4");
@@ -88,24 +101,27 @@ namespace CatalogGames
                 dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
             }
-            System.Windows.Forms.Label[] labels = { labeltags, labelgenre, labelnamedev, foundedLabel, founderLabel, websiteLabel, number_of_employeesLabel };
+            System.Windows.Forms.Label[] labels = { labeltags, labelgenre, labelnamedev, foundedLabel, founderLabel, websiteLabel, number_of_employeesLabel, descriptionLabel1, name_of_gameLabel1 };
+
             foreach (System.Windows.Forms.Label l in labels)
             {
                 l.Font = new Font("Arial", 8.25f);
                 l.ForeColor = Color.FromArgb(44, 41, 227);
             }
+            
             txtDate.ForeColor = Color.FromArgb(44, 41, 227);
             txtDate.BackColor = Color.White;
             txtDate.ReadOnly = true;
-
+            comboBox1.Font = new Font("Microsoft Sans Serif", 8.25f);
+            comboBox1.ForeColor = Color.FromArgb(44, 41, 227);
             monthCalendar1.Visible = false;
             monthCalendar1.MaxSelectionCount = 1;
-            developerDataGridView.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            usersDataGridView.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
         }
 
         private void linkLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start(linkLinkLabel.Text);
+            
         }
 
         private void gamesDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -299,12 +315,12 @@ namespace CatalogGames
             bool error = false;
             if (name_of_developerTextBox.Text != "")
             {
-                for (int i = 0; i < developerDataGridView.Rows.Count; i++)
+                for (int i = 0; i < usersDataGridView.Rows.Count; i++)
                 {
-                    string cellValue = developerDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn21"].Value?.ToString() ?? "";
+                    string cellValue = usersDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn21"].Value?.ToString() ?? "";
                     if (cellValue != null)
                     {
-                        if (name_of_developerTextBox.Text == developerDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn21"].Value.ToString())
+                        if (name_of_developerTextBox.Text == usersDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn21"].Value.ToString())
                         {
                             error = true;
                             MessageBox.Show("Такой разработчик уже существует. Запрос на добавление отклонен.", "Добавление", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -322,7 +338,7 @@ namespace CatalogGames
                     newRow[5] = number_of_employeesTextBox.Text;
                     steamDataSet.Developer.Rows.Add(newRow);
                     developerTableAdapter.Update(steamDataSet);
-                    developerDataGridView.ClearSelection();
+                    usersDataGridView.ClearSelection();
                 }
             }
         }
@@ -330,10 +346,10 @@ namespace CatalogGames
         private void button8_Click(object sender, EventArgs e)
         {
             developerTableAdapter.Update(steamDataSet.Developer);
-            if (name_of_developerTextBox.Text != "" && developerDataGridView.CurrentRow.Index != -1)
+            if (name_of_developerTextBox.Text != "" && usersDataGridView.CurrentRow.Index != -1)
             {
                 bool error = false;
-                int iddev = int.Parse(developerDataGridView.Rows[developerDataGridView.CurrentRow.Index].Cells[0].Value.ToString());
+                int iddev = int.Parse(usersDataGridView.Rows[usersDataGridView.CurrentRow.Index].Cells[0].Value.ToString());
                 for (int i = 0; i < gamesDataGridView.Rows.Count - 1; i++)
                 {
                     int dev = int.Parse(gamesDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn6"].Value.ToString());
@@ -346,18 +362,18 @@ namespace CatalogGames
                 }
                 if (error == false)
                 {
-                    DialogResult dr = MessageBox.Show("Вы точно хотите удалить разработчика " + developerDataGridView.Rows[developerDataGridView.CurrentRow.Index].Cells[1].Value.ToString(), "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult dr = MessageBox.Show("Вы точно хотите удалить разработчика " + usersDataGridView.Rows[usersDataGridView.CurrentRow.Index].Cells[1].Value.ToString(), "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dr == DialogResult.Yes)
                     {
-                        foreach (DataGridViewRow row in developerDataGridView.SelectedRows)
+                        foreach (DataGridViewRow row in usersDataGridView.SelectedRows)
                         {
-                            developerDataGridView.Rows.Remove(row);
+                            usersDataGridView.Rows.Remove(row);
                         }
                         developerTableAdapter.Update(steamDataSet.Developer);
-                        developerDataGridView.ClearSelection();
-                        int lastIndex = developerDataGridView.Rows.Count - 1;
-                        developerDataGridView.Rows[lastIndex].Selected = true;
-                        developerDataGridView.CurrentCell = developerDataGridView.Rows[lastIndex].Cells[0];
+                        usersDataGridView.ClearSelection();
+                        int lastIndex = usersDataGridView.Rows.Count - 1;
+                        usersDataGridView.Rows[lastIndex].Selected = true;
+                        usersDataGridView.CurrentCell = usersDataGridView.Rows[lastIndex].Cells[0];
 
                     }
                 }
@@ -372,15 +388,15 @@ namespace CatalogGames
             websiteTextBox.Text != "" &&
             number_of_employeesTextBox.Text != "")
             {
-                int id = developerDataGridView.CurrentRow.Index;
-                developerDataGridView.Rows[id].Cells[1].Value = name_of_developerTextBox.Text;
+                int id = usersDataGridView.CurrentRow.Index;
+                usersDataGridView.Rows[id].Cells[1].Value = name_of_developerTextBox.Text;
                 var date = DateTime.Parse(txtDate.Text);
-                developerDataGridView.Rows[id].Cells[2].Value = date;
-                developerDataGridView.Rows[id].Cells[3].Value = founderTextBox.Text;
-                developerDataGridView.Rows[id].Cells[4].Value = websiteTextBox.Text;
-                developerDataGridView.Rows[id].Cells[5].Value = number_of_employeesTextBox.Text;
+                usersDataGridView.Rows[id].Cells[2].Value = date;
+                usersDataGridView.Rows[id].Cells[3].Value = founderTextBox.Text;
+                usersDataGridView.Rows[id].Cells[4].Value = websiteTextBox.Text;
+                usersDataGridView.Rows[id].Cells[5].Value = number_of_employeesTextBox.Text;
                 developerTableAdapter.Update(steamDataSet);
-                developerDataGridView.DataSource = developerBindingSource;
+                usersDataGridView.DataSource = developerBindingSource;
             }
             else
             {
@@ -404,6 +420,144 @@ namespace CatalogGames
         private void txtDate_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void usersDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex < usersDataGridView.Rows.Count)
+            {
+                if (int.Parse(usersDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString()) == 0)
+                {
+                    usersDataGridView.Rows[e.RowIndex].Cells["lvl"].Value = "Пользователь";
+                }
+                else
+                {
+                    usersDataGridView.Rows[e.RowIndex].Cells[3].Value = "Администратор";
+                }
+            }
+        }
+
+        private void usersDataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            if (int.Parse(usersDataGridView.Rows[usersDataGridView.CurrentRow.Index].Cells[4].Value.ToString()) == 0)
+            {
+                comboBox1.SelectedIndex = 0;
+            }
+            else { 
+                comboBox1.SelectedIndex = 1;
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            bool error = false;
+            if (textBox2.Text != "" && textBox3.Text != "" && comboBox1.Text != "") 
+            {
+                for (int i = 0; i < usersDataGridView.Rows.Count; i++)
+                {
+                    string cellValue = usersDataGridView.Rows[i].Cells[1].Value?.ToString() ?? "";
+                    if (cellValue != null)
+                    {
+                        if (textBox2.Text == usersDataGridView.Rows[i].Cells[1].Value.ToString())
+                        {
+                            error = true;
+                            MessageBox.Show("Такой пользователь уже существует. Запрос на добавление отклонен.", "Добавление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            break;
+                        }
+                    }
+                }
+                if (error == false)
+                {
+                    DataRow newRow = steamDataSet.Users.NewRow();
+                    newRow[1] = textBox2.Text;
+                    newRow[2] = textBox3.Text;
+                    if (comboBox1.Text == "Пользователь") {
+                        newRow["level of access"] = 0;
+                    }
+                    else
+                    {
+                        newRow["level of access"] = 1;
+                    }
+                    steamDataSet.Users.Rows.Add(newRow);
+                    usersTableAdapter.Update(steamDataSet);
+                    usersDataGridView.ClearSelection();
+                    int lastIndex = usersDataGridView.Rows.Count - 1;
+                    usersDataGridView.Rows[lastIndex].Selected = true;
+                    usersDataGridView.CurrentCell = usersDataGridView.Rows[lastIndex].Cells[0];
+                }
+            }
+        }
+
+        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "" && textBox3.Text != "" && comboBox1.Text != "")
+            {
+                bool error = false;
+                for (int i = 0; i < gamesDataGridView.Rows.Count - 1; i++)
+                {
+                    
+                    if (user == textBox2.Text)
+                    {
+                        error = true;
+                        MessageBox.Show("Невозможно удалить пользователя с текущей сессии.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                    }
+                }
+                if (error == false)
+                {
+                    DialogResult dr = MessageBox.Show("Вы точно хотите удалить пользователя " + usersDataGridView.Rows[usersDataGridView.CurrentRow.Index].Cells[1].Value.ToString(), "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dr == DialogResult.Yes)
+                    {
+                        foreach (DataGridViewRow row in usersDataGridView.SelectedRows)
+                        {
+                            usersDataGridView.Rows.Remove(row);
+                            
+                        }
+                        usersTableAdapter.Update(steamDataSet);
+                    }
+                }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text != "" && textBox3.Text != "" && comboBox1.Text != "")
+            {
+                int id = usersDataGridView.CurrentRow.Index;
+                usersDataGridView.Rows[id].Cells[1].Value = textBox1.Text;
+                usersDataGridView.Rows[id].Cells[2].Value = textBox1.Text;
+                if (comboBox1.Text == "Пользователь")
+                {
+                    usersDataGridView.Rows[id].Cells["dataGridViewTextBoxColumn29"].Value = 0;
+                }
+                else
+                {
+                    usersDataGridView.Rows[id].Cells["dataGridViewTextBoxColumn29"].Value = 1;
+                }
+                usersTableAdapter.Update(steamDataSet);
+                usersDataGridView.DataSource = usersBindingSource;
+            }
+            else
+            {
+                MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
+            }
+            usersTableAdapter.Update(steamDataSet);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            f1.Visible = true;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(linkLinkLabel.Text);
         }
     }
 }
