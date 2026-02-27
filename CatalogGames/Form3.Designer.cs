@@ -29,41 +29,51 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label linkLabel;
+<<<<<<< HEAD
+            System.Windows.Forms.Label name_of_gameLabel;
+            System.Windows.Forms.Label descriptionLabel;
+            System.Windows.Forms.Label ratingLabel;
+            System.Windows.Forms.Label genre_IDLabel;
+            System.Windows.Forms.Label developerLabel;
+            System.Windows.Forms.Label date_of_publicationLabel;
+            System.Windows.Forms.Label gamepadLabel;
+            System.Windows.Forms.Label minimum_system_requirementsLabel;
+            System.Windows.Forms.Label age_ratingLabel;
+            System.Windows.Forms.Label exist_in_RussiaLabel;
+=======
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.Windows.Forms.Label name_of_gameLabel;
+            System.Windows.Forms.Label descriptionLabel;
+            System.Windows.Forms.Label ratingLabel;
+            System.Windows.Forms.Label genre_IDLabel;
+            System.Windows.Forms.Label developerLabel;
+            System.Windows.Forms.Label date_of_publicationLabel;
+            System.Windows.Forms.Label gamepadLabel;
+            System.Windows.Forms.Label minimum_system_requirementsLabel;
+            System.Windows.Forms.Label age_ratingLabel;
+            System.Windows.Forms.Label exist_in_RussiaLabel;
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.game_TagsDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gameIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tagIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.game_TagsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.steamDataSet = new CatalogGames.SteamDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labeltags = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.tagsDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelgenre = new System.Windows.Forms.Label();
             this.name_of_genreTextBox = new System.Windows.Forms.TextBox();
-            this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.genresDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btnCalendar = new System.Windows.Forms.Button();
             this.txtDate = new System.Windows.Forms.TextBox();
-            this.developerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.number_of_employeesLabel = new System.Windows.Forms.Label();
             this.websiteLabel = new System.Windows.Forms.Label();
             this.founderLabel = new System.Windows.Forms.Label();
@@ -77,16 +87,27 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.developerDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+<<<<<<< HEAD
+            this.exist_in_RussiaCheckBox = new System.Windows.Forms.CheckBox();
+            this.age_ratingTextBox = new System.Windows.Forms.TextBox();
+            this.gamepadCheckBox = new System.Windows.Forms.CheckBox();
+            this.date_of_publicationTextBox = new System.Windows.Forms.TextBox();
+            this.developerTextBox = new System.Windows.Forms.TextBox();
+            this.genre_IDTextBox = new System.Windows.Forms.TextBox();
+            this.ratingTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.name_of_gameTextBox = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
+=======
+            this.button14 = new System.Windows.Forms.Button();
+            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.picturePictureBox = new System.Windows.Forms.PictureBox();
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
+            this.linkLinkLabel = new System.Windows.Forms.LinkLabel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -97,25 +118,24 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.gamesDataGridView = new System.Windows.Forms.DataGridView();
             this.tagsDataGridView = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+            this.game_TagsDataGridView = new System.Windows.Forms.DataGridView();
+=======
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name_of_gameLabel1 = new System.Windows.Forms.Label();
             this.game_TagsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.game_TagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.descriptionLabel1 = new System.Windows.Forms.Label();
-            this.picturePictureBox = new System.Windows.Forms.PictureBox();
-            this.linkLinkLabel = new System.Windows.Forms.LinkLabel();
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.cabinet = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -124,16 +144,52 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.usersDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lvl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.CPU = new System.Windows.Forms.TextBox();
+            this.RAM = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.GPU = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.filter_label = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.steamDataSet = new CatalogGames.SteamDataSet();
+            this.genresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.developerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.game_TagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gameIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tagIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.game_TagsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gamesTableAdapter = new CatalogGames.SteamDataSetTableAdapters.GamesTableAdapter();
             this.tableAdapterManager = new CatalogGames.SteamDataSetTableAdapters.TableAdapterManager();
             this.game_TagsTableAdapter = new CatalogGames.SteamDataSetTableAdapters.Game_TagsTableAdapter();
@@ -141,63 +197,196 @@
             this.genresTableAdapter = new CatalogGames.SteamDataSetTableAdapters.GenresTableAdapter();
             this.developerTableAdapter = new CatalogGames.SteamDataSetTableAdapters.DeveloperTableAdapter();
             this.usersTableAdapter = new CatalogGames.SteamDataSetTableAdapters.UsersTableAdapter();
-            this.button13 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+            this.name_of_gameTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.ratingTextBox = new System.Windows.Forms.TextBox();
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gamesDataGridView = new System.Windows.Forms.DataGridView();
+            this.picturePictureBox = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genre = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
+            this.genre = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.razrab = new System.Windows.Forms.DataGridViewComboBoxColumn();
+=======
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razrab = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.req = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button14 = new System.Windows.Forms.Button();
-            linkLabel = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.genre_IDTextBox = new System.Windows.Forms.TextBox();
+            this.developerTextBox = new System.Windows.Forms.TextBox();
+            this.date_of_publicationTextBox = new System.Windows.Forms.TextBox();
+            this.gamepadCheckBox = new System.Windows.Forms.CheckBox();
+            this.minimum_system_requirementsTextBox = new System.Windows.Forms.TextBox();
+            this.age_ratingTextBox = new System.Windows.Forms.TextBox();
+            this.exist_in_RussiaCheckBox = new System.Windows.Forms.CheckBox();
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
+            name_of_gameLabel = new System.Windows.Forms.Label();
+            descriptionLabel = new System.Windows.Forms.Label();
+            ratingLabel = new System.Windows.Forms.Label();
+            genre_IDLabel = new System.Windows.Forms.Label();
+            developerLabel = new System.Windows.Forms.Label();
+            date_of_publicationLabel = new System.Windows.Forms.Label();
+            gamepadLabel = new System.Windows.Forms.Label();
+            minimum_system_requirementsLabel = new System.Windows.Forms.Label();
+            age_ratingLabel = new System.Windows.Forms.Label();
+            exist_in_RussiaLabel = new System.Windows.Forms.Label();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.steamDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.genresDataGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.developerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.developerDataGridView)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView)).BeginInit();
+=======
             ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gamesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).BeginInit();
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             this.tabControl1.SuspendLayout();
             this.cabinet.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
-            this.groupBox5.SuspendLayout();
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.steamDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.developerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // linkLabel
+            // name_of_gameLabel
             // 
-            linkLabel.AutoSize = true;
-            linkLabel.Location = new System.Drawing.Point(86, 309);
-            linkLabel.Name = "linkLabel";
-            linkLabel.Size = new System.Drawing.Size(30, 13);
-            linkLabel.TabIndex = 4;
-            linkLabel.Text = "Link:";
+            name_of_gameLabel.AutoSize = true;
+            name_of_gameLabel.Location = new System.Drawing.Point(201, 35);
+            name_of_gameLabel.Name = "name_of_gameLabel";
+            name_of_gameLabel.Size = new System.Drawing.Size(88, 13);
+            name_of_gameLabel.TabIndex = 15;
+            name_of_gameLabel.Text = "Название игры:";
             // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(201, 61);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(60, 13);
+            descriptionLabel.TabIndex = 16;
+            descriptionLabel.Text = "Описание:";
+            // 
+            // ratingLabel
+            // 
+            ratingLabel.AutoSize = true;
+            ratingLabel.Location = new System.Drawing.Point(201, 124);
+            ratingLabel.Name = "ratingLabel";
+            ratingLabel.Size = new System.Drawing.Size(48, 13);
+            ratingLabel.TabIndex = 17;
+            ratingLabel.Text = "Оценка:";
+            // 
+            // genre_IDLabel
+            // 
+            genre_IDLabel.AutoSize = true;
+            genre_IDLabel.Location = new System.Drawing.Point(201, 153);
+            genre_IDLabel.Name = "genre_IDLabel";
+            genre_IDLabel.Size = new System.Drawing.Size(53, 13);
+            genre_IDLabel.TabIndex = 18;
+            genre_IDLabel.Text = "Genre ID:";
+            // 
+            // developerLabel
+            // 
+            developerLabel.AutoSize = true;
+            developerLabel.Location = new System.Drawing.Point(201, 183);
+            developerLabel.Name = "developerLabel";
+            developerLabel.Size = new System.Drawing.Size(59, 13);
+            developerLabel.TabIndex = 19;
+            developerLabel.Text = "Developer:";
+            // 
+            // date_of_publicationLabel
+            // 
+            date_of_publicationLabel.AutoSize = true;
+            date_of_publicationLabel.Location = new System.Drawing.Point(201, 214);
+            date_of_publicationLabel.Name = "date_of_publicationLabel";
+            date_of_publicationLabel.Size = new System.Drawing.Size(99, 13);
+            date_of_publicationLabel.TabIndex = 20;
+            date_of_publicationLabel.Text = "Date of publication:";
+            date_of_publicationLabel.Click += new System.EventHandler(this.date_of_publicationLabel_Click);
+            // 
+            // gamepadLabel
+            // 
+            gamepadLabel.AutoSize = true;
+            gamepadLabel.Location = new System.Drawing.Point(201, 240);
+            gamepadLabel.Name = "gamepadLabel";
+            gamepadLabel.Size = new System.Drawing.Size(56, 13);
+            gamepadLabel.TabIndex = 21;
+            gamepadLabel.Text = "Gamepad:";
+            // 
+            // minimum_system_requirementsLabel
+            // 
+            minimum_system_requirementsLabel.AutoSize = true;
+            minimum_system_requirementsLabel.Location = new System.Drawing.Point(451, 32);
+            minimum_system_requirementsLabel.Name = "minimum_system_requirementsLabel";
+            minimum_system_requirementsLabel.Size = new System.Drawing.Size(149, 13);
+            minimum_system_requirementsLabel.TabIndex = 22;
+            minimum_system_requirementsLabel.Text = "Minimum system requirements:";
+            minimum_system_requirementsLabel.Click += new System.EventHandler(this.minimum_system_requirementsLabel_Click);
+            // 
+            // age_ratingLabel
+            // 
+            age_ratingLabel.AutoSize = true;
+            age_ratingLabel.Location = new System.Drawing.Point(451, 147);
+            age_ratingLabel.Name = "age_ratingLabel";
+            age_ratingLabel.Size = new System.Drawing.Size(58, 13);
+            age_ratingLabel.TabIndex = 23;
+            age_ratingLabel.Text = "Age rating:";
+            // 
+            // exist_in_RussiaLabel
+            // 
+            exist_in_RussiaLabel.AutoSize = true;
+            exist_in_RussiaLabel.Location = new System.Drawing.Point(453, 178);
+            exist_in_RussiaLabel.Name = "exist_in_RussiaLabel";
+            exist_in_RussiaLabel.Size = new System.Drawing.Size(78, 13);
+            exist_in_RussiaLabel.TabIndex = 24;
+            exist_in_RussiaLabel.Text = "Exist in Russia:";
+            // 
+=======
+            this.SuspendLayout();
+            // 
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             // tabPage4
             // 
             this.tabPage4.AutoScroll = true;
@@ -229,34 +418,6 @@
             this.game_TagsDataGridView1.Size = new System.Drawing.Size(389, 220);
             this.game_TagsDataGridView1.TabIndex = 5;
             this.game_TagsDataGridView1.Visible = false;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
-            // gameIDDataGridViewTextBoxColumn
-            // 
-            this.gameIDDataGridViewTextBoxColumn.DataPropertyName = "Game_ID";
-            this.gameIDDataGridViewTextBoxColumn.HeaderText = "Game_ID";
-            this.gameIDDataGridViewTextBoxColumn.Name = "gameIDDataGridViewTextBoxColumn";
-            // 
-            // tagIDDataGridViewTextBoxColumn
-            // 
-            this.tagIDDataGridViewTextBoxColumn.DataPropertyName = "Tag_ID";
-            this.tagIDDataGridViewTextBoxColumn.HeaderText = "Tag_ID";
-            this.tagIDDataGridViewTextBoxColumn.Name = "tagIDDataGridViewTextBoxColumn";
-            // 
-            // game_TagsBindingSource1
-            // 
-            this.game_TagsBindingSource1.DataMember = "Game_Tags";
-            this.game_TagsBindingSource1.DataSource = this.steamDataSet;
-            // 
-            // steamDataSet
-            // 
-            this.steamDataSet.DataSetName = "SteamDataSet";
-            this.steamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
@@ -291,11 +452,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(107, 20);
             this.textBox1.TabIndex = 4;
-            // 
-            // tagsBindingSource
-            // 
-            this.tagsBindingSource.DataMember = "Tags";
-            this.tagsBindingSource.DataSource = this.steamDataSet;
             // 
             // button4
             // 
@@ -343,18 +499,6 @@
             this.tagsDataGridView1.Size = new System.Drawing.Size(277, 292);
             this.tagsDataGridView1.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn18.HeaderText = "Номер тэга";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "Name of tag";
-            this.dataGridViewTextBoxColumn19.HeaderText = "Название тэга";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelgenre);
@@ -389,11 +533,6 @@
             this.name_of_genreTextBox.Size = new System.Drawing.Size(107, 20);
             this.name_of_genreTextBox.TabIndex = 4;
             this.name_of_genreTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.name_of_genreTextBox_KeyPress);
-            // 
-            // genresBindingSource
-            // 
-            this.genresBindingSource.DataMember = "Genres";
-            this.genresBindingSource.DataSource = this.steamDataSet;
             // 
             // button3
             // 
@@ -441,18 +580,6 @@
             this.genresDataGridView.Name = "genresDataGridView";
             this.genresDataGridView.Size = new System.Drawing.Size(329, 223);
             this.genresDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn16.HeaderText = "Номер жанра";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "Name_of_genre";
-            this.dataGridViewTextBoxColumn17.HeaderText = "Название жанра";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             // 
             // tabPage2
             // 
@@ -519,11 +646,6 @@
             this.txtDate.Size = new System.Drawing.Size(100, 20);
             this.txtDate.TabIndex = 18;
             this.txtDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDate_KeyPress);
-            // 
-            // developerBindingSource
-            // 
-            this.developerBindingSource.DataMember = "Developer";
-            this.developerBindingSource.DataSource = this.steamDataSet;
             // 
             // number_of_employeesLabel
             // 
@@ -655,49 +777,13 @@
             this.developerDataGridView.Size = new System.Drawing.Size(972, 220);
             this.developerDataGridView.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn20.HeaderText = "id";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "Name of developer";
-            this.dataGridViewTextBoxColumn21.HeaderText = "Название компании разработчиков";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "Founded";
-            this.dataGridViewTextBoxColumn22.HeaderText = "Основана";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "Founder";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Основатель";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "Website";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Сайт";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "Number of employees";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Кол-во работников";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
+            this.tabPage1.Controls.Add(this.gamesDataGridView);
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Controls.Add(this.bindingNavigator1);
-            this.tabPage1.Controls.Add(this.gamesDataGridView);
             this.tabPage1.Controls.Add(this.tagsDataGridView);
             this.tabPage1.Controls.Add(this.game_TagsDataGridView);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -708,10 +794,184 @@
             this.tabPage1.Text = "Игры";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // groupBox5
+            // 
+<<<<<<< HEAD
+            this.groupBox5.Controls.Add(this.picturePictureBox);
+            this.groupBox5.Controls.Add(this.button15);
+            this.groupBox5.Controls.Add(this.comboBox3);
+            this.groupBox5.Controls.Add(this.label1);
+            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.filter_label);
+            this.groupBox5.Controls.Add(this.GPU);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.RAM);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.CPU);
+            this.groupBox5.Controls.Add(this.label10);
+=======
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
+            this.groupBox5.Controls.Add(exist_in_RussiaLabel);
+            this.groupBox5.Controls.Add(this.exist_in_RussiaCheckBox);
+            this.groupBox5.Controls.Add(age_ratingLabel);
+            this.groupBox5.Controls.Add(this.age_ratingTextBox);
+            this.groupBox5.Controls.Add(minimum_system_requirementsLabel);
+<<<<<<< HEAD
+=======
+            this.groupBox5.Controls.Add(this.minimum_system_requirementsTextBox);
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
+            this.groupBox5.Controls.Add(gamepadLabel);
+            this.groupBox5.Controls.Add(this.gamepadCheckBox);
+            this.groupBox5.Controls.Add(date_of_publicationLabel);
+            this.groupBox5.Controls.Add(this.date_of_publicationTextBox);
+            this.groupBox5.Controls.Add(developerLabel);
+            this.groupBox5.Controls.Add(this.developerTextBox);
+            this.groupBox5.Controls.Add(genre_IDLabel);
+            this.groupBox5.Controls.Add(this.genre_IDTextBox);
+            this.groupBox5.Controls.Add(ratingLabel);
+            this.groupBox5.Controls.Add(this.ratingTextBox);
+            this.groupBox5.Controls.Add(descriptionLabel);
+            this.groupBox5.Controls.Add(this.descriptionTextBox);
+            this.groupBox5.Controls.Add(name_of_gameLabel);
+            this.groupBox5.Controls.Add(this.name_of_gameTextBox);
+            this.groupBox5.Controls.Add(this.button14);
+<<<<<<< HEAD
+            this.groupBox5.Controls.Add(this.linkLinkLabel);
+            this.groupBox5.Location = new System.Drawing.Point(30, 255);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1334, 382);
+            this.groupBox5.TabIndex = 16;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // exist_in_RussiaCheckBox
+            // 
+            this.exist_in_RussiaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.gamesBindingSource, "Exist in Russia", true));
+            this.exist_in_RussiaCheckBox.Location = new System.Drawing.Point(537, 173);
+            this.exist_in_RussiaCheckBox.Name = "exist_in_RussiaCheckBox";
+            this.exist_in_RussiaCheckBox.Size = new System.Drawing.Size(24, 24);
+            this.exist_in_RussiaCheckBox.TabIndex = 25;
+            this.exist_in_RussiaCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // age_ratingTextBox
+            // 
+            this.age_ratingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Age rating", true));
+            this.age_ratingTextBox.Location = new System.Drawing.Point(517, 144);
+            this.age_ratingTextBox.MaxLength = 2;
+            this.age_ratingTextBox.Name = "age_ratingTextBox";
+            this.age_ratingTextBox.Size = new System.Drawing.Size(30, 20);
+            this.age_ratingTextBox.TabIndex = 24;
+            // 
+            // gamepadCheckBox
+            // 
+            this.gamepadCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.gamesBindingSource, "Gamepad", true));
+            this.gamepadCheckBox.Location = new System.Drawing.Point(263, 235);
+            this.gamepadCheckBox.Name = "gamepadCheckBox";
+            this.gamepadCheckBox.Size = new System.Drawing.Size(26, 24);
+            this.gamepadCheckBox.TabIndex = 22;
+            this.gamepadCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // date_of_publicationTextBox
+            // 
+            this.date_of_publicationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Date of publication", true));
+            this.date_of_publicationTextBox.Location = new System.Drawing.Point(306, 211);
+            this.date_of_publicationTextBox.Name = "date_of_publicationTextBox";
+            this.date_of_publicationTextBox.Size = new System.Drawing.Size(137, 20);
+            this.date_of_publicationTextBox.TabIndex = 21;
+            this.date_of_publicationTextBox.TextChanged += new System.EventHandler(this.date_of_publicationTextBox_TextChanged);
+            // 
+            // developerTextBox
+            // 
+            this.developerTextBox.Location = new System.Drawing.Point(266, 180);
+            this.developerTextBox.Name = "developerTextBox";
+            this.developerTextBox.Size = new System.Drawing.Size(177, 20);
+            this.developerTextBox.TabIndex = 20;
+            // 
+            // genre_IDTextBox
+            // 
+            this.genre_IDTextBox.Location = new System.Drawing.Point(260, 150);
+            this.genre_IDTextBox.Name = "genre_IDTextBox";
+            this.genre_IDTextBox.Size = new System.Drawing.Size(183, 20);
+            this.genre_IDTextBox.TabIndex = 19;
+            // 
+            // ratingTextBox
+            // 
+            this.ratingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Rating", true));
+            this.ratingTextBox.Location = new System.Drawing.Point(255, 121);
+            this.ratingTextBox.Name = "ratingTextBox";
+            this.ratingTextBox.Size = new System.Drawing.Size(188, 20);
+            this.ratingTextBox.TabIndex = 18;
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Description", true));
+            this.descriptionTextBox.Location = new System.Drawing.Point(267, 58);
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(176, 57);
+            this.descriptionTextBox.TabIndex = 17;
+            // 
+            // name_of_gameTextBox
+            // 
+            this.name_of_gameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Name of game", true));
+            this.name_of_gameTextBox.Location = new System.Drawing.Point(295, 32);
+            this.name_of_gameTextBox.Name = "name_of_gameTextBox";
+            this.name_of_gameTextBox.Size = new System.Drawing.Size(148, 20);
+            this.name_of_gameTextBox.TabIndex = 16;
+=======
+            this.groupBox5.Controls.Add(this.picturePictureBox);
+            this.groupBox5.Controls.Add(this.linkLinkLabel);
+            this.groupBox5.Location = new System.Drawing.Point(30, 255);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(766, 382);
+            this.groupBox5.TabIndex = 16;
+            this.groupBox5.TabStop = false;
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(204, 318);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(98, 44);
+            this.button14.TabIndex = 15;
+            this.button14.Text = "Ссылка на игру";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+<<<<<<< HEAD
+            // linkLinkLabel
+            // 
+=======
+            // gamesBindingSource
+            // 
+            this.gamesBindingSource.DataMember = "Games";
+            this.gamesBindingSource.DataSource = this.steamDataSet;
+            // 
+            // picturePictureBox
+            // 
+            this.picturePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.gamesBindingSource, "Picture", true));
+            this.picturePictureBox.Location = new System.Drawing.Point(24, 35);
+            this.picturePictureBox.Name = "picturePictureBox";
+            this.picturePictureBox.Size = new System.Drawing.Size(171, 220);
+            this.picturePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePictureBox.TabIndex = 3;
+            this.picturePictureBox.TabStop = false;
+            // 
+            // linkLinkLabel
+            // 
+            this.linkLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Link", true));
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
+            this.linkLinkLabel.Location = new System.Drawing.Point(364, 339);
+            this.linkLinkLabel.Name = "linkLinkLabel";
+            this.linkLinkLabel.Size = new System.Drawing.Size(64, 23);
+            this.linkLinkLabel.TabIndex = 5;
+            this.linkLinkLabel.TabStop = true;
+            this.linkLinkLabel.Text = "linkLabel1";
+            this.linkLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLinkLabel_LinkClicked);
+            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.gamesBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
@@ -727,7 +987,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(1101, 252);
+            this.bindingNavigator1.Location = new System.Drawing.Point(1104, 3);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -746,11 +1006,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // gamesBindingSource
-            // 
-            this.gamesBindingSource.DataMember = "Games";
-            this.gamesBindingSource.DataSource = this.steamDataSet;
             // 
             // bindingNavigatorCountItem
             // 
@@ -829,6 +1084,8 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+<<<<<<< HEAD
+=======
             // gamesDataGridView
             // 
             this.gamesDataGridView.AllowUserToAddRows = false;
@@ -839,8 +1096,10 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
+            this.genre,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
+            this.razrab,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewTextBoxColumn8,
@@ -853,8 +1112,10 @@
             this.gamesDataGridView.Name = "gamesDataGridView";
             this.gamesDataGridView.Size = new System.Drawing.Size(1334, 220);
             this.gamesDataGridView.TabIndex = 1;
+            this.gamesDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.gamesDataGridView_CellFormatting);
             this.gamesDataGridView.SelectionChanged += new System.EventHandler(this.gamesDataGridView_SelectionChanged);
             // 
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             // tagsDataGridView
             // 
             this.tagsDataGridView.AllowUserToAddRows = false;
@@ -870,6 +1131,8 @@
             this.tagsDataGridView.TabIndex = 8;
             this.tagsDataGridView.Visible = false;
             // 
+<<<<<<< HEAD
+=======
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
@@ -882,16 +1145,7 @@
             this.dataGridViewTextBoxColumn15.HeaderText = "Name of tag";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
-            // name_of_gameLabel1
-            // 
-            this.name_of_gameLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Name of game", true));
-            this.name_of_gameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.name_of_gameLabel1.Location = new System.Drawing.Point(207, 35);
-            this.name_of_gameLabel1.Name = "name_of_gameLabel1";
-            this.name_of_gameLabel1.Size = new System.Drawing.Size(130, 23);
-            this.name_of_gameLabel1.TabIndex = 14;
-            this.name_of_gameLabel1.Text = "label4";
-            // 
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             // game_TagsDataGridView
             // 
             this.game_TagsDataGridView.AllowUserToAddRows = false;
@@ -908,6 +1162,8 @@
             this.game_TagsDataGridView.Size = new System.Drawing.Size(33, 220);
             this.game_TagsDataGridView.TabIndex = 7;
             // 
+<<<<<<< HEAD
+=======
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.DataPropertyName = "ID";
@@ -931,37 +1187,7 @@
             this.game_TagsBindingSource.DataMember = "Game_Tags";
             this.game_TagsBindingSource.DataSource = this.steamDataSet;
             // 
-            // descriptionLabel1
-            // 
-            this.descriptionLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Description", true));
-            this.descriptionLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.descriptionLabel1.Location = new System.Drawing.Point(207, 60);
-            this.descriptionLabel1.Name = "descriptionLabel1";
-            this.descriptionLabel1.Size = new System.Drawing.Size(106, 126);
-            this.descriptionLabel1.TabIndex = 13;
-            this.descriptionLabel1.Text = "label4";
-            // 
-            // picturePictureBox
-            // 
-            this.picturePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.gamesBindingSource, "Picture", true));
-            this.picturePictureBox.Location = new System.Drawing.Point(24, 35);
-            this.picturePictureBox.Name = "picturePictureBox";
-            this.picturePictureBox.Size = new System.Drawing.Size(171, 220);
-            this.picturePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picturePictureBox.TabIndex = 3;
-            this.picturePictureBox.TabStop = false;
-            // 
-            // linkLinkLabel
-            // 
-            this.linkLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Link", true));
-            this.linkLinkLabel.Location = new System.Drawing.Point(364, 339);
-            this.linkLinkLabel.Name = "linkLinkLabel";
-            this.linkLinkLabel.Size = new System.Drawing.Size(64, 23);
-            this.linkLinkLabel.TabIndex = 5;
-            this.linkLinkLabel.TabStop = true;
-            this.linkLinkLabel.Text = "linkLabel1";
-            this.linkLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLinkLabel_LinkClicked);
-            // 
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -991,6 +1217,16 @@
             this.cabinet.Size = new System.Drawing.Size(1398, 639);
             this.cabinet.TabIndex = 4;
             this.cabinet.Text = "Личный кабинет";
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(38, 354);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(124, 61);
+            this.button13.TabIndex = 19;
+            this.button13.Text = "Сменить аккаунт";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // groupBox3
             // 
@@ -1029,11 +1265,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(131, 20);
             this.textBox3.TabIndex = 8;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.steamDataSet;
             // 
             // comboBox1
             // 
@@ -1127,28 +1358,6 @@
             this.usersDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.usersDataGridView_CellFormatting);
             this.usersDataGridView.SelectionChanged += new System.EventHandler(this.usersDataGridView_SelectionChanged);
             // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn26.HeaderText = "id";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "login";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Логин";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "password";
-            this.dataGridViewTextBoxColumn28.HeaderText = "Пароль";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            // 
             // lvl
             // 
             this.lvl.HeaderText = "Уровень доступа";
@@ -1156,13 +1365,6 @@
             this.lvl.ReadOnly = true;
             this.lvl.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.lvl.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "level of access";
-            this.dataGridViewTextBoxColumn29.HeaderText = "Уровень доступа";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
             // 
             // label6
             // 
@@ -1219,6 +1421,287 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Логин:";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(453, 55);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "CPU:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // CPU
+            // 
+            this.CPU.Location = new System.Drawing.Point(492, 52);
+            this.CPU.MaxLength = 50;
+            this.CPU.Name = "CPU";
+            this.CPU.Size = new System.Drawing.Size(135, 20);
+            this.CPU.TabIndex = 28;
+            this.CPU.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // RAM
+            // 
+            this.RAM.Location = new System.Drawing.Point(492, 82);
+            this.RAM.MaxLength = 5;
+            this.RAM.Name = "RAM";
+            this.RAM.Size = new System.Drawing.Size(135, 20);
+            this.RAM.TabIndex = 30;
+            this.RAM.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(453, 85);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(34, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "RAM:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // GPU
+            // 
+            this.GPU.Location = new System.Drawing.Point(492, 111);
+            this.GPU.MaxLength = 50;
+            this.GPU.Name = "GPU";
+            this.GPU.Size = new System.Drawing.Size(135, 20);
+            this.GPU.TabIndex = 32;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(453, 114);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(33, 13);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "GPU:";
+            // 
+            // filter_label
+            // 
+            this.filter_label.AutoSize = true;
+            this.filter_label.Location = new System.Drawing.Point(670, 32);
+            this.filter_label.Name = "filter_label";
+            this.filter_label.Size = new System.Drawing.Size(189, 13);
+            this.filter_label.TabIndex = 33;
+            this.filter_label.Text = "Выберите столбец для фильтрации:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "По названию",
+            "По оценке",
+            "По жанру",
+            "По разработчику",
+            "По поддержке геймпада",
+            "По возрастному рейтингу",
+            "По доступу в РФ"});
+            this.comboBox2.Location = new System.Drawing.Point(673, 52);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(186, 21);
+            this.comboBox2.TabIndex = 34;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(670, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "Выберите ...";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(673, 94);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(186, 21);
+            this.comboBox3.TabIndex = 36;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(713, 133);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(106, 37);
+            this.button15.TabIndex = 37;
+            this.button15.Text = "Фильтровать";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // steamDataSet
+            // 
+            this.steamDataSet.DataSetName = "SteamDataSet";
+            this.steamDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // genresBindingSource
+            // 
+            this.genresBindingSource.DataMember = "Genres";
+            this.genresBindingSource.DataSource = this.steamDataSet;
+            // 
+            // developerBindingSource
+            // 
+            this.developerBindingSource.DataMember = "Developer";
+            this.developerBindingSource.DataSource = this.steamDataSet;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn14.HeaderText = "id";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Name of tag";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Name of tag";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // tagsBindingSource
+            // 
+            this.tagsBindingSource.DataMember = "Tags";
+            this.tagsBindingSource.DataSource = this.steamDataSet;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn11.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Game_ID";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Game_ID";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Tag_ID";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Tag_ID";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // game_TagsBindingSource
+            // 
+            this.game_TagsBindingSource.DataMember = "Game_Tags";
+            this.game_TagsBindingSource.DataSource = this.steamDataSet;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn20.HeaderText = "id";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Name of developer";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Название компании разработчиков";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Founded";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Основана";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Founder";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Основатель";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Website";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Сайт";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Number of employees";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Кол-во работников";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // gameIDDataGridViewTextBoxColumn
+            // 
+            this.gameIDDataGridViewTextBoxColumn.DataPropertyName = "Game_ID";
+            this.gameIDDataGridViewTextBoxColumn.HeaderText = "Game_ID";
+            this.gameIDDataGridViewTextBoxColumn.Name = "gameIDDataGridViewTextBoxColumn";
+            // 
+            // tagIDDataGridViewTextBoxColumn
+            // 
+            this.tagIDDataGridViewTextBoxColumn.DataPropertyName = "Tag_ID";
+            this.tagIDDataGridViewTextBoxColumn.HeaderText = "Tag_ID";
+            this.tagIDDataGridViewTextBoxColumn.Name = "tagIDDataGridViewTextBoxColumn";
+            // 
+            // game_TagsBindingSource1
+            // 
+            this.game_TagsBindingSource1.DataMember = "Game_Tags";
+            this.game_TagsBindingSource1.DataSource = this.steamDataSet;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Номер тэга";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Name of tag";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Название тэга";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Номер жанра";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Name_of_genre";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Название жанра";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.steamDataSet;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn26.HeaderText = "id";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            this.dataGridViewTextBoxColumn26.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "login";
+            this.dataGridViewTextBoxColumn27.HeaderText = "Логин";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "password";
+            this.dataGridViewTextBoxColumn28.HeaderText = "Пароль";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "level of access";
+            this.dataGridViewTextBoxColumn29.HeaderText = "Уровень доступа";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            // 
             // gamesTableAdapter
             // 
             this.gamesTableAdapter.ClearBeforeFill = true;
@@ -1254,16 +1737,60 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // button13
+<<<<<<< HEAD
+=======
+            // name_of_gameLabel
             // 
-            this.button13.Location = new System.Drawing.Point(38, 354);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(124, 61);
-            this.button13.TabIndex = 19;
-            this.button13.Text = "Сменить аккаунт";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            name_of_gameLabel.AutoSize = true;
+            name_of_gameLabel.Location = new System.Drawing.Point(201, 35);
+            name_of_gameLabel.Name = "name_of_gameLabel";
+            name_of_gameLabel.Size = new System.Drawing.Size(88, 13);
+            name_of_gameLabel.TabIndex = 15;
+            name_of_gameLabel.Text = "Название игры:";
             // 
+            // name_of_gameTextBox
+            // 
+            this.name_of_gameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Name of game", true));
+            this.name_of_gameTextBox.Location = new System.Drawing.Point(295, 32);
+            this.name_of_gameTextBox.Name = "name_of_gameTextBox";
+            this.name_of_gameTextBox.Size = new System.Drawing.Size(148, 20);
+            this.name_of_gameTextBox.TabIndex = 16;
+            // 
+            // descriptionLabel
+            // 
+            descriptionLabel.AutoSize = true;
+            descriptionLabel.Location = new System.Drawing.Point(201, 61);
+            descriptionLabel.Name = "descriptionLabel";
+            descriptionLabel.Size = new System.Drawing.Size(60, 13);
+            descriptionLabel.TabIndex = 16;
+            descriptionLabel.Text = "Описание:";
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Description", true));
+            this.descriptionTextBox.Location = new System.Drawing.Point(267, 58);
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.Size = new System.Drawing.Size(176, 20);
+            this.descriptionTextBox.TabIndex = 17;
+            // 
+            // ratingLabel
+            // 
+            ratingLabel.AutoSize = true;
+            ratingLabel.Location = new System.Drawing.Point(201, 88);
+            ratingLabel.Name = "ratingLabel";
+            ratingLabel.Size = new System.Drawing.Size(48, 13);
+            ratingLabel.TabIndex = 17;
+            ratingLabel.Text = "Оценка:";
+            // 
+            // ratingTextBox
+            // 
+            this.ratingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Rating", true));
+            this.ratingTextBox.Location = new System.Drawing.Point(255, 85);
+            this.ratingTextBox.Name = "ratingTextBox";
+            this.ratingTextBox.Size = new System.Drawing.Size(188, 20);
+            this.ratingTextBox.TabIndex = 18;
+            // 
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -1271,71 +1798,158 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Visible = false;
             // 
-            // dataGridViewTextBoxColumn2
+            // gamesBindingSource
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name of game";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Название игры";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.gamesBindingSource.DataMember = "Games";
+            this.gamesBindingSource.DataSource = this.steamDataSet;
+            // 
+            // gamesDataGridView
+            // 
+            this.gamesDataGridView.AutoGenerateColumns = false;
+            this.gamesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gamesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.genre,
+            this.razrab,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewCheckBoxColumn1,
+            this.req,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewCheckBoxColumn2,
+            this.dataGridViewImageColumn1});
+            this.gamesDataGridView.DataSource = this.gamesBindingSource;
+            this.gamesDataGridView.Location = new System.Drawing.Point(30, 29);
+            this.gamesDataGridView.Name = "gamesDataGridView";
+            this.gamesDataGridView.Size = new System.Drawing.Size(1334, 220);
+            this.gamesDataGridView.TabIndex = 16;
+            // 
+            // picturePictureBox
+            // 
+            this.picturePictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.gamesBindingSource, "Picture", true));
+            this.picturePictureBox.Location = new System.Drawing.Point(15, 32);
+            this.picturePictureBox.Name = "picturePictureBox";
+            this.picturePictureBox.Size = new System.Drawing.Size(168, 241);
+            this.picturePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picturePictureBox.TabIndex = 38;
+            this.picturePictureBox.TabStop = false;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Description";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Описание";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "id";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "Name of game";
+            this.dataGridViewTextBoxColumn31.HeaderText = "Name of game";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Rating";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Оценка";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Description";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Description";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // genre
+            // 
+            this.genre.DataPropertyName = "Genre_ID";
+            this.genre.DataSource = this.genresBindingSource;
+            this.genre.DisplayMember = "Name_of_genre";
+            this.genre.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.genre.HeaderText = "Жанр";
+            this.genre.Name = "genre";
+            this.genre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.genre.ValueMember = "id";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Genre_ID";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Жанр";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Rating";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Rating";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Visible = false;
             // 
-            // dataGridViewTextBoxColumn6
+            // genre
             // 
+<<<<<<< HEAD
+            this.genre.DataPropertyName = "Genre_ID";
+            this.genre.DataSource = this.genresBindingSource;
+            this.genre.DisplayMember = "Name_of_genre";
+            this.genre.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.genre.HeaderText = "Genre_ID";
+            this.genre.Name = "genre";
+            this.genre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.genre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.genre.ValueMember = "id";
+=======
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Developer";
             this.dataGridViewTextBoxColumn6.HeaderText = "Разработчик";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
             // 
-            // dataGridViewTextBoxColumn7
+            // razrab
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date of publication";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Дата публикации";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.razrab.DataPropertyName = "Developer";
+            this.razrab.DataSource = this.developerBindingSource;
+            this.razrab.DisplayMember = "Name of developer";
+            this.razrab.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.razrab.HeaderText = "Разработчик";
+            this.razrab.Name = "razrab";
+            this.razrab.ValueMember = "id";
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
+            // 
+            // razrab
+            // 
+            this.razrab.DataPropertyName = "Developer";
+            this.razrab.DataSource = this.developerBindingSource;
+            this.razrab.DisplayMember = "Name of developer";
+            this.razrab.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
+            this.razrab.HeaderText = "Developer";
+            this.razrab.Name = "razrab";
+            this.razrab.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.razrab.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.razrab.ValueMember = "id";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Date of publication";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Date of publication";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // dataGridViewCheckBoxColumn1
             // 
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Gamepad";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Поддержка геймпада";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Gamepad";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             // 
-            // dataGridViewTextBoxColumn8
+            // req
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Minimum system requirements";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Минимальные системные требования";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Age rating";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Возрастной рейтинг";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.req.DataPropertyName = "Minimum system requirements";
+            this.req.HeaderText = "Minimum system requirements";
+            this.req.Name = "req";
+            this.req.Visible = false;
             // 
             // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Link";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Ссылка на игру";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Age rating";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Age rating";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "Link";
+            this.dataGridViewTextBoxColumn30.HeaderText = "Link";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.Visible = false;
             // 
             // dataGridViewCheckBoxColumn2
             // 
             this.dataGridViewCheckBoxColumn2.DataPropertyName = "Exist in Russia";
-            this.dataGridViewCheckBoxColumn2.HeaderText = "Доступна ли в РФ";
+            this.dataGridViewCheckBoxColumn2.HeaderText = "Exist in Russia";
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             // 
             // dataGridViewImageColumn1
@@ -1345,30 +1959,131 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Visible = false;
             // 
-            // groupBox5
+<<<<<<< HEAD
+=======
+            // genre_IDLabel
             // 
-            this.groupBox5.Controls.Add(this.button14);
-            this.groupBox5.Controls.Add(this.descriptionLabel1);
-            this.groupBox5.Controls.Add(this.picturePictureBox);
-            this.groupBox5.Controls.Add(this.linkLinkLabel);
-            this.groupBox5.Controls.Add(linkLabel);
-            this.groupBox5.Controls.Add(this.name_of_gameLabel1);
-            this.groupBox5.Location = new System.Drawing.Point(30, 255);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(434, 365);
-            this.groupBox5.TabIndex = 16;
-            this.groupBox5.TabStop = false;
+            genre_IDLabel.AutoSize = true;
+            genre_IDLabel.Location = new System.Drawing.Point(201, 117);
+            genre_IDLabel.Name = "genre_IDLabel";
+            genre_IDLabel.Size = new System.Drawing.Size(53, 13);
+            genre_IDLabel.TabIndex = 18;
+            genre_IDLabel.Text = "Genre ID:";
             // 
-            // button14
+            // genre_IDTextBox
             // 
-            this.button14.Location = new System.Drawing.Point(210, 211);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(98, 44);
-            this.button14.TabIndex = 15;
-            this.button14.Text = "Ссылка на игру";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.genre_IDTextBox.Location = new System.Drawing.Point(260, 114);
+            this.genre_IDTextBox.Name = "genre_IDTextBox";
+            this.genre_IDTextBox.Size = new System.Drawing.Size(183, 20);
+            this.genre_IDTextBox.TabIndex = 19;
             // 
+            // developerLabel
+            // 
+            developerLabel.AutoSize = true;
+            developerLabel.Location = new System.Drawing.Point(201, 147);
+            developerLabel.Name = "developerLabel";
+            developerLabel.Size = new System.Drawing.Size(59, 13);
+            developerLabel.TabIndex = 19;
+            developerLabel.Text = "Developer:";
+            // 
+            // developerTextBox
+            // 
+            this.developerTextBox.Location = new System.Drawing.Point(266, 144);
+            this.developerTextBox.Name = "developerTextBox";
+            this.developerTextBox.Size = new System.Drawing.Size(177, 20);
+            this.developerTextBox.TabIndex = 20;
+            // 
+            // date_of_publicationLabel
+            // 
+            date_of_publicationLabel.AutoSize = true;
+            date_of_publicationLabel.Location = new System.Drawing.Point(201, 178);
+            date_of_publicationLabel.Name = "date_of_publicationLabel";
+            date_of_publicationLabel.Size = new System.Drawing.Size(99, 13);
+            date_of_publicationLabel.TabIndex = 20;
+            date_of_publicationLabel.Text = "Date of publication:";
+            date_of_publicationLabel.Click += new System.EventHandler(this.date_of_publicationLabel_Click);
+            // 
+            // date_of_publicationTextBox
+            // 
+            this.date_of_publicationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Date of publication", true));
+            this.date_of_publicationTextBox.Location = new System.Drawing.Point(306, 175);
+            this.date_of_publicationTextBox.Name = "date_of_publicationTextBox";
+            this.date_of_publicationTextBox.Size = new System.Drawing.Size(137, 20);
+            this.date_of_publicationTextBox.TabIndex = 21;
+            this.date_of_publicationTextBox.TextChanged += new System.EventHandler(this.date_of_publicationTextBox_TextChanged);
+            // 
+            // gamepadLabel
+            // 
+            gamepadLabel.AutoSize = true;
+            gamepadLabel.Location = new System.Drawing.Point(201, 204);
+            gamepadLabel.Name = "gamepadLabel";
+            gamepadLabel.Size = new System.Drawing.Size(56, 13);
+            gamepadLabel.TabIndex = 21;
+            gamepadLabel.Text = "Gamepad:";
+            // 
+            // gamepadCheckBox
+            // 
+            this.gamepadCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.gamesBindingSource, "Gamepad", true));
+            this.gamepadCheckBox.Location = new System.Drawing.Point(263, 199);
+            this.gamepadCheckBox.Name = "gamepadCheckBox";
+            this.gamepadCheckBox.Size = new System.Drawing.Size(26, 24);
+            this.gamepadCheckBox.TabIndex = 22;
+            this.gamepadCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // minimum_system_requirementsLabel
+            // 
+            minimum_system_requirementsLabel.AutoSize = true;
+            minimum_system_requirementsLabel.Location = new System.Drawing.Point(451, 38);
+            minimum_system_requirementsLabel.Name = "minimum_system_requirementsLabel";
+            minimum_system_requirementsLabel.Size = new System.Drawing.Size(149, 13);
+            minimum_system_requirementsLabel.TabIndex = 22;
+            minimum_system_requirementsLabel.Text = "Minimum system requirements:";
+            // 
+            // minimum_system_requirementsTextBox
+            // 
+            this.minimum_system_requirementsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Minimum system requirements", true));
+            this.minimum_system_requirementsTextBox.Location = new System.Drawing.Point(606, 35);
+            this.minimum_system_requirementsTextBox.Multiline = true;
+            this.minimum_system_requirementsTextBox.Name = "minimum_system_requirementsTextBox";
+            this.minimum_system_requirementsTextBox.Size = new System.Drawing.Size(136, 99);
+            this.minimum_system_requirementsTextBox.TabIndex = 23;
+            // 
+            // age_ratingLabel
+            // 
+            age_ratingLabel.AutoSize = true;
+            age_ratingLabel.Location = new System.Drawing.Point(451, 147);
+            age_ratingLabel.Name = "age_ratingLabel";
+            age_ratingLabel.Size = new System.Drawing.Size(58, 13);
+            age_ratingLabel.TabIndex = 23;
+            age_ratingLabel.Text = "Age rating:";
+            // 
+            // age_ratingTextBox
+            // 
+            this.age_ratingTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Age rating", true));
+            this.age_ratingTextBox.Location = new System.Drawing.Point(517, 144);
+            this.age_ratingTextBox.Name = "age_ratingTextBox";
+            this.age_ratingTextBox.Size = new System.Drawing.Size(225, 20);
+            this.age_ratingTextBox.TabIndex = 24;
+            // 
+            // exist_in_RussiaLabel
+            // 
+            exist_in_RussiaLabel.AutoSize = true;
+            exist_in_RussiaLabel.Location = new System.Drawing.Point(453, 178);
+            exist_in_RussiaLabel.Name = "exist_in_RussiaLabel";
+            exist_in_RussiaLabel.Size = new System.Drawing.Size(78, 13);
+            exist_in_RussiaLabel.TabIndex = 24;
+            exist_in_RussiaLabel.Text = "Exist in Russia:";
+            // 
+            // exist_in_RussiaCheckBox
+            // 
+            this.exist_in_RussiaCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.gamesBindingSource, "Exist in Russia", true));
+            this.exist_in_RussiaCheckBox.Location = new System.Drawing.Point(537, 173);
+            this.exist_in_RussiaCheckBox.Name = "exist_in_RussiaCheckBox";
+            this.exist_in_RussiaCheckBox.Size = new System.Drawing.Size(24, 24);
+            this.exist_in_RussiaCheckBox.TabIndex = 25;
+            this.exist_in_RussiaCheckBox.UseVisualStyleBackColor = true;
+            // 
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1383,41 +2098,56 @@
             this.Load += new System.EventHandler(this.Form3_Load);
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.steamDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.genresDataGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.developerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.developerDataGridView)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView)).EndInit();
+=======
             ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
+            this.bindingNavigator1.ResumeLayout(false);
+            this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gamesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).EndInit();
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             this.tabControl1.ResumeLayout(false);
             this.cabinet.ResumeLayout(false);
             this.cabinet.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.steamDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.developerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.game_TagsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).EndInit();
+=======
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
             this.ResumeLayout(false);
 
         }
@@ -1425,7 +2155,6 @@
         #endregion
 
         private SteamDataSet steamDataSet;
-        private System.Windows.Forms.BindingSource gamesBindingSource;
         private SteamDataSetTableAdapters.GamesTableAdapter gamesTableAdapter;
         private SteamDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private SteamDataSetTableAdapters.Game_TagsTableAdapter game_TagsTableAdapter;
@@ -1455,17 +2184,17 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.DataGridView gamesDataGridView;
         private System.Windows.Forms.DataGridView tagsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.Label name_of_gameLabel1;
         private System.Windows.Forms.DataGridView game_TagsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.Label descriptionLabel1;
+<<<<<<< HEAD
+=======
         private System.Windows.Forms.PictureBox picturePictureBox;
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
         private System.Windows.Forms.LinkLabel linkLinkLabel;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.DataGridView tagsDataGridView1;
@@ -1535,12 +2264,21 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TextBox ratingTextBox;
+        private System.Windows.Forms.TextBox descriptionTextBox;
+        private System.Windows.Forms.TextBox name_of_gameTextBox;
+<<<<<<< HEAD
+=======
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewComboBoxColumn genre;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewComboBoxColumn razrab;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -1548,7 +2286,45 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button14;
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
+        private System.Windows.Forms.TextBox date_of_publicationTextBox;
+        private System.Windows.Forms.TextBox developerTextBox;
+        private System.Windows.Forms.TextBox genre_IDTextBox;
+        private System.Windows.Forms.CheckBox gamepadCheckBox;
+        private System.Windows.Forms.CheckBox exist_in_RussiaCheckBox;
+        private System.Windows.Forms.TextBox age_ratingTextBox;
+<<<<<<< HEAD
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox CPU;
+        private System.Windows.Forms.TextBox RAM;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox GPU;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label filter_label;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource gamesBindingSource;
+        private System.Windows.Forms.DataGridView gamesDataGridView;
+        private System.Windows.Forms.PictureBox picturePictureBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn genre;
+        private System.Windows.Forms.DataGridViewComboBoxColumn razrab;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn req;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+=======
+        private System.Windows.Forms.TextBox minimum_system_requirementsTextBox;
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
     }
 }

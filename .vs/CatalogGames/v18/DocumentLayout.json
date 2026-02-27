@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -24,9 +24,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -71,8 +68,7 @@
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form1.cs [Design]",
               "RelativeToolTip": "CatalogGames\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T10:39:06.351Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-24T10:39:06.351Z"
             },
             {
               "$type": "Document",
@@ -83,8 +79,7 @@
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form2.cs [Design]",
               "RelativeToolTip": "CatalogGames\\Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T10:36:37.757Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-24T10:36:37.757Z"
             },
             {
               "$type": "Document",
@@ -96,8 +91,7 @@
               "RelativeToolTip": "CatalogGames\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-02-24T10:36:36.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T10:36:36.408Z"
             },
             {
               "$type": "Document",
@@ -108,8 +102,7 @@
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\CatalogGames.csproj",
               "RelativeToolTip": "CatalogGames\\CatalogGames.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-24T10:32:42.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T10:32:42.355Z"
             },
             {
               "$type": "Document",
@@ -121,8 +114,7 @@
               "RelativeToolTip": "CatalogGames\\Form2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T10:24:58.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T10:24:58.629Z"
             }
           ]
         }

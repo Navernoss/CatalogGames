@@ -101,7 +101,11 @@ namespace CatalogGames
                 dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
             }
-            System.Windows.Forms.Label[] labels = { labeltags, labelgenre, labelnamedev, foundedLabel, founderLabel, websiteLabel, number_of_employeesLabel, descriptionLabel1, name_of_gameLabel1 };
+<<<<<<< HEAD
+            System.Windows.Forms.Label[] labels = { labeltags, labelgenre, labelnamedev, foundedLabel, founderLabel, websiteLabel, number_of_employeesLabel,  };
+=======
+            System.Windows.Forms.Label[] labels = { labeltags, labelgenre, labelnamedev, foundedLabel, founderLabel, websiteLabel, number_of_employeesLabel };
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
 
             foreach (System.Windows.Forms.Label l in labels)
             {
@@ -126,13 +130,34 @@ namespace CatalogGames
 
         private void gamesDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            int index = e.RowIndex;
-
+            //int index = e.RowIndex;
+            //if (index < gamesDataGridView.Rows.Count - 1)
+            //{
+            //    int genre = int.Parse(gamesDataGridView.Rows[index].Cells["dataGridViewTextBoxColumn5"].Value.ToString());
+            //    for (int i = 0; i < genresDataGridView.Rows.Count - 1; i++)
+            //    {
+            //        if (genre == int.Parse(genresDataGridView.Rows[i].Cells[0].Value.ToString()))
+            //        {
+            //            gamesDataGridView.Rows[index].Cells["genre"].Value = genresDataGridView.Rows[i].Cells[1].Value.ToString();
+            //        }
+            //    }
+            //}
         }
 
         private void gamesDataGridView_SelectionChanged(object sender, EventArgs e)
         {
+            developerTextBox.Text = gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells["razrab"].FormattedValue.ToString();
+            genre_IDTextBox.Text = gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells["genre"].FormattedValue.ToString();
+<<<<<<< HEAD
+            string req = gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells["req"].Value.ToString();
+            string[] reqsplit = req.Split(',');
+            System.Windows.Forms.TextBox[] textBoxes = { CPU, RAM, GPU };
+            for (int i = 0; i < textBoxes.Length; i++) {
+                textBoxes[i].Text = reqsplit[i].TrimStart().Split(':')[1];
+            }
 
+=======
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
         }
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
@@ -208,8 +233,7 @@ namespace CatalogGames
                 int idgenre = int.Parse(genresDataGridView.Rows[genresDataGridView.CurrentRow.Index].Cells[0].Value.ToString());
                 for (int i = 0; i < gamesDataGridView.Rows.Count - 1; i++) {
                     int genre = int.Parse(gamesDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn5"].Value.ToString());
-                    Console.WriteLine(genre);
-                    if (idgenre == int.Parse(gamesDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn5"].Value.ToString())){
+                    if (idgenre == genre){
                         error = true;
                         MessageBox.Show("Такой жанр имеет связи в таблице 'Игры'. Сначала уберите этот жанр из всех строк в таблице 'Игры' и повторите попытку.", "Удаление", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
@@ -559,5 +583,148 @@ namespace CatalogGames
         {
             System.Diagnostics.Process.Start(linkLinkLabel.Text);
         }
+
+        private void date_of_publicationLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_of_publicationTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+<<<<<<< HEAD
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void minimum_system_requirementsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.Text != "" && comboBox2.SelectedIndex != -1)
+            {
+                if (comboBox2.SelectedIndex == 0)
+                {
+                    label1.Text = "Введите название игры:";
+                }
+                else if (comboBox2.SelectedIndex == 2)
+                {
+                    label1.Text = "Выберите жанр:";
+                    comboBox3.Items.Clear();
+                    for (int i = 0; i < genresDataGridView.Rows.Count - 1; i++)
+                    {
+                        comboBox3.Items.Add(genresDataGridView.Rows[i].Cells[1].Value.ToString());
+                    }
+                }
+                else if (comboBox2.SelectedIndex == 1)
+                {
+                    label1.Text = "Выберите оценку:";
+                    comboBox3.Items.Clear();
+                    comboBox3.Items.Add("0");
+                    comboBox3.Items.Add("1");
+                    comboBox3.Items.Add("< 1");
+                    comboBox3.Items.Add("> 1");
+                    comboBox3.Items.Add("2");
+                    comboBox3.Items.Add("< 2");
+                    comboBox3.Items.Add("> 2");
+                    comboBox3.Items.Add("3");
+                    comboBox3.Items.Add("< 3");
+                    comboBox3.Items.Add("> 3");
+                    comboBox3.Items.Add("4");
+                    comboBox3.Items.Add("< 4");
+                    comboBox3.Items.Add("> 4");
+                    comboBox3.Items.Add("5");
+                    comboBox3.Items.Add("< 5");
+                    comboBox3.Items.Add("> 5");
+                    comboBox3.Items.Add("6");
+                    comboBox3.Items.Add("< 6");
+                    comboBox3.Items.Add("> 6");
+                    comboBox3.Items.Add("7");
+                    comboBox3.Items.Add("< 7");
+                    comboBox3.Items.Add("> 7");
+                    comboBox3.Items.Add("8");
+                    comboBox3.Items.Add("< 8");
+                    comboBox3.Items.Add("> 8");
+                    comboBox3.Items.Add("9");
+                    comboBox3.Items.Add("< 9");
+                    comboBox3.Items.Add("> 9");
+                    comboBox3.Items.Add("10");
+                    comboBox3.Items.Add("< 10");
+                }
+                else if (comboBox2.SelectedIndex == 3)
+                {
+                    label1.Text = "Выберите разработчика:";
+                    comboBox3.Items.Clear();
+                    for (int i = 0; i < developerDataGridView.Rows.Count - 1; i++)
+                    {
+                        comboBox3.Items.Add(developerDataGridView.Rows[i].Cells[1].Value.ToString());
+                    }
+                }
+                else if (comboBox2.SelectedIndex == 4)
+                {
+                    label1.Text = "Поддерживает ли игра геймпад";
+                    comboBox3.Items.Clear();
+                    comboBox3.Items.Add("Да");
+                    comboBox3.Items.Add("Нет");
+                }
+                else if (comboBox2.SelectedIndex == 5)
+                {
+                    label1.Text = "Выберите рейтинг:";
+                    comboBox3.Items.Clear();
+                    comboBox3.Items.Add("0+");
+                    comboBox3.Items.Add("7+");
+                    comboBox3.Items.Add("12+");
+                    comboBox3.Items.Add("16+");
+                    comboBox3.Items.Add("18+");
+                }
+                else if (comboBox2.SelectedIndex == 6) {
+                    label1.Text = "Доступна ли игра в РФ";
+                    comboBox3.Items.Clear();
+                    comboBox3.Items.Add("Да");
+                    comboBox3.Items.Add("Нет");
+                }
+            } 
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (comboBox2.Text != "" && comboBox3.Text != "")
+            {
+                if (comboBox1.SelectedIndex == 0) { 
+                    
+                }
+            }
+            else {
+                MessageBox.Show("Вы не выбрали все нужные условия для фильтрации", "Фильтрация", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+=======
+>>>>>>> f7177e4d050590a182f15c1c76c719820d9790da
     }
 }
