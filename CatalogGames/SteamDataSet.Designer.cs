@@ -1311,7 +1311,7 @@ namespace CatalogGames {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public GamesRow AddGamesRow(string Name_of_game, string Description, string Rating, GenresRow parentGenresRowByGenresGames, DeveloperRow parentDeveloperRowByDeveloperGames, int Date_of_publication, bool Gamepad, string Minimum_system_requirements, string Age_rating, string Link, bool Exist_in_Russia, byte[] Picture) {
+            public GamesRow AddGamesRow(string Name_of_game, string Description, float Rating, GenresRow parentGenresRowByGenresGames, DeveloperRow parentDeveloperRowByDeveloperGames, int Date_of_publication, bool Gamepad, string Minimum_system_requirements, string Age_rating, string Link, bool Exist_in_Russia, byte[] Picture) {
                 GamesRow rowGamesRow = ((GamesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1386,7 +1386,7 @@ namespace CatalogGames {
                 base.Columns.Add(this.columnName_of_game);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescription);
-                this.columnRating = new global::System.Data.DataColumn("Rating", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnRating = new global::System.Data.DataColumn("Rating", typeof(float), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRating);
                 this.columnGenre_ID = new global::System.Data.DataColumn("Genre_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnGenre_ID);
@@ -1415,7 +1415,6 @@ namespace CatalogGames {
                 this.columnid.Unique = true;
                 this.columnName_of_game.MaxLength = 255;
                 this.columnDescription.MaxLength = 255;
-                this.columnRating.MaxLength = 255;
                 this.columnMinimum_system_requirements.MaxLength = 255;
                 this.columnAge_rating.MaxLength = 255;
                 this.columnLink.MaxLength = 536870910;
@@ -2742,10 +2741,10 @@ namespace CatalogGames {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string Rating {
+            public float Rating {
                 get {
                     try {
-                        return ((string)(this[this.tableGames.RatingColumn]));
+                        return ((float)(this[this.tableGames.RatingColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Rating\' in table \'Games\' is DBNull.", e);
