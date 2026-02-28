@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -619,7 +620,7 @@ namespace CatalogGames
                 {
                     label1.Text = "Выберите разработчика:";
                     comboBox3.Items.Clear();
-                    for (int i = 0; i < developerDataGridView.Rows.Count - 1; i++)
+                    for (int i = 0; i < developerDataGridView.Rows.Count; i++)
                     {
                         comboBox3.Items.Add(developerDataGridView.Rows[i].Cells[1].Value.ToString());
                     }
@@ -680,13 +681,26 @@ namespace CatalogGames
                 }
                 else if (comboBox2.SelectedIndex == 2)
                 {
-                    int index = comboBox3.SelectedIndex + 1;
-                    gamesBindingSource.Filter = "Genre_ID = " + index;
+                    string genre = comboBox3.Text;
+                    for (int i = 0; i < genresDataGridView.Rows.Count - 1; i++) {
+                        if (genresDataGridView.Rows[i].Cells[1].Value.ToString() == genre) {
+                            gamesBindingSource.Filter = "Genre_ID = " + genresDataGridView.Rows[i].Cells[0].Value;
+                            break;
+                        }
+                    }
+                    
                 }
                 else if (comboBox2.SelectedIndex == 3)
                 {
-                    int index = comboBox3.SelectedIndex + 1;
-                    gamesBindingSource.Filter = "Developer = " + index;
+                    string dev = comboBox3.Text;
+                    for (int i = 0; i < developerDataGridView.Rows.Count; i++)
+                    {
+                        if (developerDataGridView.Rows[i].Cells[1].Value.ToString() == dev)
+                        {
+                            gamesBindingSource.Filter = "Developer = " + developerDataGridView.Rows[i].Cells[0].Value;
+                            break;
+                        }
+                    }
                 }
                 else if (comboBox2.SelectedIndex == 4)
                 {

@@ -95,6 +95,7 @@
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -185,7 +186,6 @@
             this.genresTableAdapter = new CatalogGames.SteamDataSetTableAdapters.GenresTableAdapter();
             this.developerTableAdapter = new CatalogGames.SteamDataSetTableAdapters.DeveloperTableAdapter();
             this.usersTableAdapter = new CatalogGames.SteamDataSetTableAdapters.UsersTableAdapter();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             linkLabel = new System.Windows.Forms.Label();
             exist_in_RussiaLabel = new System.Windows.Forms.Label();
             age_ratingLabel = new System.Windows.Forms.Label();
@@ -880,6 +880,14 @@
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(661, 32);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(161, 214);
+            this.checkedListBox1.TabIndex = 69;
+            // 
             // button14
             // 
             this.button14.Location = new System.Drawing.Point(883, 183);
@@ -903,6 +911,7 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.ItemHeight = 13;
             this.comboBox3.Location = new System.Drawing.Point(843, 101);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(186, 21);
@@ -1697,14 +1706,6 @@
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(661, 32);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(161, 214);
-            this.checkedListBox1.TabIndex = 69;
             // 
             // Form3
             // 
