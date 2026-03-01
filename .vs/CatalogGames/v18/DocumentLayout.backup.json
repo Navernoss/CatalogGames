@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\CatalogGames\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\steamdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
-      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\steamdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\steamdataset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\steamdataset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\steamdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\steamdataset.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -40,9 +36,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -68,25 +61,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SteamDataSet.cs",
-              "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\SteamDataSet.cs",
-              "RelativeDocumentMoniker": "CatalogGames\\SteamDataSet.cs",
-              "ToolTip": "D:\\CatalogGames\\CatalogGames\\SteamDataSet.cs",
-              "RelativeToolTip": "CatalogGames\\SteamDataSet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T12:25:08.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form3.cs [Design]",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form3.cs",
               "RelativeDocumentMoniker": "CatalogGames\\Form3.cs",
-              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.cs [Design]",
-              "RelativeToolTip": "CatalogGames\\Form3.cs [Design]",
+              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.cs [Design]*",
+              "RelativeToolTip": "CatalogGames\\Form3.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-24T10:39:08.431Z",
               "EditorCaption": " [Design]"
@@ -97,16 +77,16 @@
               "Title": "Form3.cs",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form3.cs",
               "RelativeDocumentMoniker": "CatalogGames\\Form3.cs",
-              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.cs",
-              "RelativeToolTip": "CatalogGames\\Form3.cs",
-              "ViewState": "AgIAAFcBAAAAAAAAAAAawHEBAAAoAAAAAAAAAA==",
+              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.cs*",
+              "RelativeToolTip": "CatalogGames\\Form3.cs*",
+              "ViewState": "AgIAANIBAAAAAAAAAAAawOMBAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-27T12:40:40.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SteamDataSet.xsd",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\SteamDataSet.xsd",
               "RelativeDocumentMoniker": "CatalogGames\\SteamDataSet.xsd",
@@ -118,44 +98,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Form3.Designer.cs",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form3.Designer.cs",
               "RelativeDocumentMoniker": "CatalogGames\\Form3.Designer.cs",
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.Designer.cs",
               "RelativeToolTip": "CatalogGames\\Form3.Designer.cs",
-              "ViewState": "AgIAAG0HAAAAAAAAAAAgwBYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-27T14:10:02.221Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form1.cs",
               "RelativeDocumentMoniker": "CatalogGames\\Form1.cs",
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form1.cs [Design]",
               "RelativeToolTip": "CatalogGames\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T10:39:06.351Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-24T10:39:06.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form2.cs",
               "RelativeDocumentMoniker": "CatalogGames\\Form2.cs",
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form2.cs [Design]",
               "RelativeToolTip": "CatalogGames\\Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T10:36:37.757Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-24T10:36:37.757Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "App.config",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\App.config",
               "RelativeDocumentMoniker": "CatalogGames\\App.config",
@@ -168,19 +146,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "CatalogGames",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\CatalogGames.csproj",
               "RelativeDocumentMoniker": "CatalogGames\\CatalogGames.csproj",
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\CatalogGames.csproj",
               "RelativeToolTip": "CatalogGames\\CatalogGames.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-24T10:32:42.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T10:32:42.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Form2.cs",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form2.cs",
               "RelativeDocumentMoniker": "CatalogGames\\Form2.cs",
@@ -188,8 +165,7 @@
               "RelativeToolTip": "CatalogGames\\Form2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-24T10:24:58.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-24T10:24:58.629Z"
             }
           ]
         }

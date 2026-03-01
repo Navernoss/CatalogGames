@@ -19,6 +19,8 @@ namespace CatalogGames
     public partial class Form3 : Form
     {
         private Form1 f1;
+        private Dictionary<string, TabPage> allTabs = new Dictionary<string, TabPage>();
+        private Dictionary<string, int> tabIndexes = new Dictionary<string, int>();
         public Form3(Form1 form1)
         {
             InitializeComponent();
@@ -43,6 +45,8 @@ namespace CatalogGames
                 groupBox3.Visible = false;
                 groupBox4.Visible = false;
                 usersDataGridView.Visible = false;
+                HideTab("tabPage2");
+                HideTab("tabPage4");
             }
             else
             {
@@ -57,9 +61,41 @@ namespace CatalogGames
                 groupBox3.Visible = true;
                 groupBox4.Visible = true;
                 usersDataGridView.Visible = true;
+                ShowTab("tabPage2");
+                ShowTab("tabPage4");
             }
 
 
+        }
+
+        private void HideTab(string tabName)
+        {
+            if (tabControl1.TabPages.ContainsKey(tabName))
+            {
+                tabControl1.TabPages.RemoveByKey(tabName);
+            }
+        }
+
+        private void ShowTab(string tabName)
+        {
+            if (!tabControl1.TabPages.ContainsKey(tabName))
+            {
+                TabPage tab = allTabs[tabName];
+                int index = tabIndexes[tabName];
+
+                
+                int actualIndex = 0;
+                for (int i = 0; i < index; i++)
+                {
+                    string name = allTabs.ElementAt(i).Key;
+                    if (tabControl1.TabPages.ContainsKey(name))
+                    {
+                        actualIndex++;
+                    }
+                }
+
+                tabControl1.TabPages.Insert(actualIndex, tab);
+            }
         }
 
         private void gamesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -72,6 +108,7 @@ namespace CatalogGames
 
         private void Form3_Load(object sender, EventArgs e)
         {
+
             // TODO: This line of code loads data into the 'steamDataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.steamDataSet.Users);
             // TODO: This line of code loads data into the 'steamDataSet.Developer' table. You can move, or remove it, as needed.
@@ -120,6 +157,39 @@ namespace CatalogGames
             monthCalendar1.Visible = false;
             monthCalendar1.MaxSelectionCount = 1;
             usersDataGridView.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            checkedListBox1.Items.Clear();
+            for (int i = 0; i < tagsDataGridView1.Rows.Count - 1; i++)
+            {
+                checkedListBox1.Items.Add(tagsDataGridView1.Rows[i].Cells[1].Value);
+            }
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+
+            }
+            game_TagsBindingSource.Filter = "Game_ID = " + gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells[0].Value;
+            for (int i = 0; i < game_TagsDataGridView.Rows.Count; i++)
+            {
+                string tagFromGrid = game_TagsDataGridView.Rows[i].Cells[2].FormattedValue.ToString();
+
+                for (int j = 0; j < checkedListBox1.Items.Count; j++)
+                {
+                    string tagFromList = checkedListBox1.Items[j].ToString();
+
+                    if (tagFromGrid == tagFromList)
+                    {
+
+                        checkedListBox1.SetItemChecked(j, true);
+                        break;
+                    }
+                }
+            }
+            for (int i = 0; i < tabControl1.TabPages.Count; i++)
+            {
+                TabPage tab = tabControl1.TabPages[i];
+                allTabs[tab.Name] = tab;
+                tabIndexes[tab.Name] = i;
+            }
         }
 
         private void linkLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -133,22 +203,38 @@ namespace CatalogGames
 
         }
         private byte[] selectedImageBytes = null;
+
         private void gamesDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             if (gamesDataGridView.SelectedRows.Count > 0)
             {
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+                    
+                }
+                game_TagsBindingSource.Filter = "Game_ID = " + gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells[0].Value;
+                for (int i = 0; i < game_TagsDataGridView.Rows.Count; i++) {
+                    string tagFromGrid = game_TagsDataGridView.Rows[i].Cells[2].FormattedValue.ToString();
+                    
+                    for (int j = 0; j < checkedListBox1.Items.Count; j++) {
+                        string tagFromList = checkedListBox1.Items[j].ToString();
 
+                        if (tagFromGrid == tagFromList)
+                        {
+                            
+                            checkedListBox1.SetItemChecked(j, true);
+                            break;
+                        }
+                    }
+                }
+                
                 string req = gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells["req"].Value.ToString();
                 string[] reqsplit = req.Split(',');
                 System.Windows.Forms.TextBox[] textBoxes = { CPU_textbox, RAM_textbox, GPU_textbox };
                 for (int i = 0; i < textBoxes.Length; i++)
                 {
                     textBoxes[i].Text = reqsplit[i].TrimStart().Split(':')[1];
-                }
-                checkedListBox1.Items.Clear();
-                for (int i = 0; i < tagsDataGridView1.Rows.Count - 1; i++)
-                {
-                    checkedListBox1.Items.Add(tagsDataGridView1.Rows[i].Cells[1].Value);
                 }
                 genre_comboBox.Items.Clear();
                 for (int i = 0; i < genresDataGridView.Rows.Count - 1; i++)
@@ -308,6 +394,28 @@ namespace CatalogGames
                         {
                             checkedListBox1.Items.Add(tagsDataGridView1.Rows[i].Cells[1].Value);
                         }
+                        for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                        {
+                            checkedListBox1.SetItemChecked(i, false);
+
+                        }
+                        game_TagsBindingSource.Filter = "Game_ID = " + gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells[0].Value;
+                        for (int i = 0; i < game_TagsDataGridView.Rows.Count; i++)
+                        {
+                            string tagFromGrid = game_TagsDataGridView.Rows[i].Cells[2].FormattedValue.ToString();
+
+                            for (int j = 0; j < checkedListBox1.Items.Count; j++)
+                            {
+                                string tagFromList = checkedListBox1.Items[j].ToString();
+
+                                if (tagFromGrid == tagFromList)
+                                {
+
+                                    checkedListBox1.SetItemChecked(j, true);
+                                    break;
+                                }
+                            }
+                        }
                         tagsBindingSource.EndEdit();
                         tagsTableAdapter.Update(steamDataSet);
                     }
@@ -345,6 +453,28 @@ namespace CatalogGames
                     {
                         checkedListBox1.Items.Add(tagsDataGridView1.Rows[i].Cells[1].Value);
                     }
+                    for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                    {
+                        checkedListBox1.SetItemChecked(i, false);
+
+                    }
+                    game_TagsBindingSource.Filter = "Game_ID = " + gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells[0].Value;
+                    for (int i = 0; i < game_TagsDataGridView.Rows.Count; i++)
+                    {
+                        string tagFromGrid = game_TagsDataGridView.Rows[i].Cells[2].FormattedValue.ToString();
+
+                        for (int j = 0; j < checkedListBox1.Items.Count; j++)
+                        {
+                            string tagFromList = checkedListBox1.Items[j].ToString();
+
+                            if (tagFromGrid == tagFromList)
+                            {
+
+                                checkedListBox1.SetItemChecked(j, true);
+                                break;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -361,6 +491,28 @@ namespace CatalogGames
                 for (int i = 0; i < tagsDataGridView1.Rows.Count - 1; i++)
                 {
                     checkedListBox1.Items.Add(tagsDataGridView1.Rows[i].Cells[1].Value);
+                }
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+
+                }
+                game_TagsBindingSource.Filter = "Game_ID = " + gamesDataGridView.Rows[gamesDataGridView.CurrentRow.Index].Cells[0].Value;
+                for (int i = 0; i < game_TagsDataGridView.Rows.Count; i++)
+                {
+                    string tagFromGrid = game_TagsDataGridView.Rows[i].Cells[2].FormattedValue.ToString();
+
+                    for (int j = 0; j < checkedListBox1.Items.Count; j++)
+                    {
+                        string tagFromList = checkedListBox1.Items[j].ToString();
+
+                        if (tagFromGrid == tagFromList)
+                        {
+
+                            checkedListBox1.SetItemChecked(j, true);
+                            break;
+                        }
+                    }
                 }
             }
             else
