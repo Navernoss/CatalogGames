@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\CatalogGames\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +11,16 @@
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|d:\\cataloggames\\cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|D:\\CatalogGames\\cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1F570E8E-1B0A-469A-BCC8-8FEC68A05898}|CatalogGames\\CatalogGames.csproj|solutionrelative:cataloggames\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,78 +42,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form3.cs",
+              "DocumentIndex": 3,
+              "Title": "Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form3.cs",
               "RelativeDocumentMoniker": "CatalogGames\\Form3.cs",
-              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.cs",
-              "RelativeToolTip": "CatalogGames\\Form3.cs",
-              "ViewState": "AgIAACICAAAAAAAAAAAmwC8CAAAMAAAAAAAAAA==",
+              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
+              "RelativeToolTip": "CatalogGames\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T04:50:21.883Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-03T04:31:20.712Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Title": "Form3.cs",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form3.cs",
               "RelativeDocumentMoniker": "CatalogGames\\Form3.cs",
-              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "CatalogGames\\Form3.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form3.cs*",
+              "RelativeToolTip": "CatalogGames\\Form3.cs*",
+              "ViewState": "AgIAACUCAAAAAAAAAAAmwDgCAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T04:49:57.259Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form2.cs",
-              "RelativeDocumentMoniker": "CatalogGames\\Form2.cs",
-              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form2.cs",
-              "RelativeToolTip": "CatalogGames\\Form2.cs",
-              "ViewState": "AgIAADsBAAAAAAAAAAAAAE4BAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T04:48:20.554Z",
+              "WhenOpened": "2026-03-03T04:29:23.471Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form2.cs",
-              "RelativeDocumentMoniker": "CatalogGames\\Form2.cs",
-              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "CatalogGames\\Form2.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T04:48:02.607Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form1.cs",
-              "RelativeDocumentMoniker": "CatalogGames\\Form1.cs",
-              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form1.cs",
-              "RelativeToolTip": "CatalogGames\\Form1.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADAAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-16T04:39:41.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "App.config",
               "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\App.config",
               "RelativeDocumentMoniker": "CatalogGames\\App.config",
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\App.config",
               "RelativeToolTip": "CatalogGames\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-02-16T04:34:55.86Z",
+              "WhenOpened": "2026-03-03T04:15:24.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\CatalogGames\\CatalogGames\\Form1.cs",
+              "RelativeDocumentMoniker": "CatalogGames\\Form1.cs",
+              "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form1.cs",
+              "RelativeToolTip": "CatalogGames\\Form1.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwC8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T04:12:34.577Z",
               "EditorCaption": ""
             },
             {
@@ -133,7 +100,7 @@
               "ToolTip": "D:\\CatalogGames\\CatalogGames\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "CatalogGames\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T06:39:02.2Z",
+              "WhenOpened": "2026-03-03T04:12:52.185Z",
               "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             }
           ]

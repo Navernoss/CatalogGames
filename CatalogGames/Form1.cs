@@ -40,21 +40,17 @@ namespace CatalogGames
         {
             if (textBoxlogin.Text != "" && textBoxpassword.Text != "")
             {
-                for (int i = 0; i < usersDataGridView.Rows.Count; i++) {
-                    if (textBoxlogin.Text == usersDataGridView.Rows[i].Cells[1].Value.ToString())
+                for (int i = 0; i <= usersDataGridView.Rows.Count; i++) {
+                    if (textBoxlogin.Text == usersDataGridView.Rows[i].Cells[1].Value.ToString() && textBoxpassword.Text == usersDataGridView.Rows[i].Cells[2].Value.ToString())
                     {
-                        if (textBoxpassword.Text == usersDataGridView.Rows[i].Cells[2].Value.ToString())
-                        {
+                        
                             form3.Visible = true;
                             form3.SetUserData(usersDataGridView.Rows[i].Cells[1].Value.ToString(), int.Parse(usersDataGridView.Rows[i].Cells[3].Value.ToString()));
                             this.Visible = false;
                             break;
-                        }
+                        
                     }
-                    else {
-                        MessageBox.Show("Пользователь с таким логином не найден", "Авторизация", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        break;
-                    }
+               
                 }
             }
             else {

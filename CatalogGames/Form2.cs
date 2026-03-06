@@ -198,10 +198,10 @@ namespace CatalogGames
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.DeveloperTableAdapter = null;
-            this.tableAdapterManager.Game_TagsTableAdapter = null;
+            
             this.tableAdapterManager.GamesTableAdapter = null;
             this.tableAdapterManager.GenresTableAdapter = null;
-            this.tableAdapterManager.TagsTableAdapter = null;
+            
             this.tableAdapterManager.UpdateOrder = CatalogGames.SteamDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
             // 
