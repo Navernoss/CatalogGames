@@ -40,17 +40,22 @@ namespace CatalogGames
         {
             if (textBoxlogin.Text != "" && textBoxpassword.Text != "")
             {
-                for (int i = 0; i <= usersDataGridView.Rows.Count; i++) {
-                    if (textBoxlogin.Text == usersDataGridView.Rows[i].Cells[1].Value.ToString() && textBoxpassword.Text == usersDataGridView.Rows[i].Cells[2].Value.ToString())
+                bool exist = false;
+                for (int i = 0; i < usersDataGridView.Rows.Count; i++) {
+                    //Console.WriteLine(usersDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn2"].Value.ToString() + " " + usersDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn3"].Value.ToString());
+                    if (textBoxlogin.Text == usersDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn2"].Value.ToString() && textBoxpassword.Text == usersDataGridView.Rows[i].Cells["dataGridViewTextBoxColumn3"].Value.ToString())
                     {
                         
                             form3.Visible = true;
                             form3.SetUserData(usersDataGridView.Rows[i].Cells[1].Value.ToString(), int.Parse(usersDataGridView.Rows[i].Cells[3].Value.ToString()));
                             this.Visible = false;
+                            exist = true;
                             break;
                         
                     }
-               
+                }
+                if (exist == false) {
+                    MessageBox.Show("Такого пользователя не существует. Попробуйте еще раз", "Авторизация", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else {

@@ -294,14 +294,29 @@
   <data name="&gt;&gt;buttonlogin.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>id</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>login</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>password</value>
+  </data>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>level of access</value>
+  </data>
   <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>143, 17</value>
+  </metadata>
+  <metadata name="steamDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <data name="usersDataGridView.Location" type="System.Drawing.Point, System.Drawing">
     <value>319, 359</value>
   </data>
   <data name="usersDataGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 220</value>
+    <value>302, 220</value>
   </data>
   <data name="usersDataGridView.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -321,27 +336,6 @@
   <data name="&gt;&gt;usersDataGridView.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>id</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>login</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>password</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>level of access</value>
-  </data>
-  <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>143, 17</value>
-  </metadata>
-  <metadata name="steamDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="steamDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -412,7 +406,83 @@
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>382, 392</value>
+    <value>364, 383</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAMMOAADDDgAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVgQAA1X8AANWAAArVgAAa1YAAEdWAAAHVgAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAhC8AAIQvAAGELwARhC8AGoQvAAqELwAAhC8AANWAAAPVgABO1YAAuNWAANvVgADM1YAAe9WA
+        ABLVgAAA14EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAhTAAAIQvAACELwAShC8Ae4QvAMyELwDbhC8AuIQvAE6ELwAD1YAAWtWAAOrVgAD/1YAA/9WA
+        AP/VgAD91YAAntWAAA7VgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAACELwAAhC8ADoQvAJ6ELwD9hC8A/4QvAP+ELwD/hC8A6oQvAFrVgADS1YAA/9WA
+        AP/VgAD/1YAA/9WAAP/VgAD81YAAidWAAAfVgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAhC8AAIQvAAeELwCJhC8A/IQvAP+ELwD/hC8A/4QvAP+ELwD/hC8A0tWA
+        APvVgAD/1YAA/9WAAP/VgAD/1YAA/9WAAP/VgAD31YAActWAAAPVgAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQvAACELwADhC8AcoQvAPeELwD/hC8A/4QvAP+ELwD/hC8A/4Qv
+        AP+ELwD71YAA/9WAAP/VgAD/1YAA/9WAAP/VgAD/1YAA/9WAAP/VgADv1YAAXNWAAADVgAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACELwAAhC8AAIQvAFyELwDvhC8A/4QvAP+ELwD/hC8A/4Qv
+        AP+ELwD/hC8A/4QvAP/VgAD/1YAA/9WAAP/VgAD/1YAA/9WAAP/VgAD/1YAA/9WAAP/VgADl1YAAR9WA
+        AADVgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhC8AAIQvAACELwBHhC8A5YQvAP+ELwD/hC8A/4Qv
+        AP+ELwD/hC8A/4QvAP+ELwD/hC8A/9WAAP/VgAD/1YAA/9WAAP/VgAD/1YAA/9WAAP/VgAD/1YAA/9WA
+        AP/VgADY1H4ANdaCAADKbQAAAAAAAAAAAAAAAAAAAAAAAGobAACHMQAAgi0ANYMuANiDLgD/gy4A/4Qv
+        AP+ELwD/hC8A/4QvAP+ELwD/hC8A/4QvAP+ELwD/1YAA/9WAAP/VgAD/1YAA/9R/AP/VgAD/14MD/9iG
+        Bv/Zhwf/2YcH/9mHB//aiAnH6aIjMf/JShf9xkcY+Lw9GNuKCxrXgwMa3IgDGa9bAjKPOgDHjDcA/4w4
+        AP+MOAD/izYA/4gzAP+ELwD/gy4A/4QvAP+ELwD/hC8A/4QvAP/VgAD/1YAA/9WAAP/VgQH/3o8P/+ul
+        Jv/ztDX/9ro7//e7PP/3uzz/97s8//e7PP77wULl/cVG2P3GR9n4vT7Z2ogI2tV/ANrVgADZ0XwA5cp1
+        AP7KdQD/ynUA/8p1AP/IdAD/wm0B/7FcAf+XQgD/hTAA/4QvAP+ELwD/hC8A/9WAAP/VfwD/2IUG/+um
+        Jv/6wEH//sZH//7GR//9xkf//cZH//3GR//9xkf//cZH//3FRv/9xUb//cZH//i9Pv/aiAj/1X8A/9WA
+        AP/VgAD/1oEA/9aBAP/WgQD/1oEA/9aBAP/WgQD/1oEA/9B7AP+xXQH/izYA/4MuAP+ELwD/1X8A/9iG
+        Bv/wri///cVG//3FRv/9xUb//cVG//3FRv/9xUb//cVG//3FRv/9xUb//cVG//3FRv/9xkf/+L0+/9qI
+        CP/VfwD/1YAA/9WAAP/VgAD/1YAA/9WAAP/VgAD/1YAA/9WAAP/VgAD/1YAA/9WBAP+7ZwH/izYA/4Mu
+        AP/WgQH/66Yn//3FRv/9xUb//cVG//3FRv/9xUb//cVG//3FRv/9xUb//cVG//3FRv/9xUb//cVG//3G
+        R//4vT7/2ogI/9V/AP/VgAD/1YAA/9WAAP/VgAD/1YAA/9R+AP/VfwD/1YAA/9WAAP/VgAD/1YAA/9aB
+        AP+yXQH/hjEA/+CTE//6wEH//cVG//3FRv/9xUb//cVG//3FRv/9xUb//cdM//3HTP/9xUb//cVG//3F
+        Rv/9xUb//cZH//i9Pv/aiAj/1X8A/9WAAP/VgAD/1YAA/9WAAP/YiRT/4KNQ/9iLGP/VfwD/1YAA/9WA
+        AP/VgAD/1YAA/9B7AP+bRgH/760t//3GR//9xUb//cVG//3FRv/9xUb//cVF//3HTf/84rT//OCu//3G
+        Sv/9xUX//cVG//3FRv/9xkf/+L0+/9qICP/VfwD/1YAA/9WAAP/VgAD/1X4A/+ChTP/04dz/4aZX/9V+
+        AP/VgAD/1YAA/9WAAP/VgAD/1oEA/7plAf/5vT7//cVG//3FRv/9xUb//cVG//3FRv/9xkv//c1m//vu
+        5P/77d7//cxh//3GS//9xUb//cVG//3GR//4vT7/2ogI/9V/AP/VgAD/1YAA/9aDB//Wgwf/2IkV/+Gk
+        U//Yixn/1oIG/9aDCP/VgAD/1YAA/9WAAP/VgAD/zXgB//zERf/9xUb//cVG//3FRv/9xUX//cdO//zi
+        tP/77eD/+/Lz//vy8v/77d///OCu//3GS//9xUb//cZH//i9Pv/aiAj/1X8A/9WAAP/Wgwf/57qF/+i9
+        i//WhAn/1H4A/9aCBv/nuYL/6b6O/9aFCv/VgAD/1YAA/9WAAP/UfwD//cVG+/3FRv/9xUb//cVG//3F
+        Rf/9x0///OO4//vu4//78vT/+/Lz//vu4v/84bH//cZM//3FRv/9xkf/+L0+/9qICP/VfwD/1YAA/9aD
+        B//ovYr/6b+Q/9aECv/UfgD/1oIG/+i7h//pwJL/14UL/9WAAP/VgAD/1YAA/9WAAPz9xUbj/cVG//3F
+        Rv/9xUb//cVG//3FRv/9x03//c1o//vu5P/77d7//cxj//3GTP/9xUb//cVG//3GR//4vT7/2ogI/9V/
+        AP/VgAD/1YAA/9aECf/WhAn/2IgT/+CiTP/Yihb/1oMI/9aECv/VgAD/1YAA/9WAAP/VgAD/1YEB5f3F
+        Rqj9xUb//cVG//3FRv/9xUb//cVG//3FRf/9x03//OO4//zhsv/9xkv//cVF//3FRv/9xUb//cZH//i9
+        Pv/aiAj/1X8A/9WAAP/VgAD/1YAA/9V+AP/goUz/9OHc/+GmV//VfgD/1YAA/9WAAP/VgAD/1YAA/9WA
+        AP/WgQGq/cVGSv3FRu39xUb//cVG//3FRv/9xUb//cVG//3FRv/9x07//cdN//3FRv/9xUb//cVG//3F
+        Rv/9xkf/+L0+/9qICP/VfwD/1YAA/9WAAP/VgAD/1X8A/9iKFv/hplf/2Ywb/9V/AP/VgAD/1YAA/9WA
+        AP/VgAD/1YAA7taCAkz9xUYG/cVGkv3FRv/9xUb//cVG//3FRv/9xUb//cVG//3FRf/9xUb//cVG//3F
+        Rv/9xUb//cVG//3GR//4vT7/2ogI/9V/AP/VgAD/1YAA/9WAAP/VgAD/1X8A/9R+AP/VfwD/1YAA/9WA
+        AP/VgAD/1YAA/9WAAP/WgQGU2YcHB/3FRgD9xUYY/cVGsP3FRv/9xUb//cVG//3FRv/9xUb//cVG//3F
+        Rv/9xUb//cVG//3FRv/9xUb//cZH//i9Pv/aiAj/1X8A/9WAAP/VgAD/1YAA/9WAAP/VgAD/1YAA/9WA
+        AP/VgAD/1YAA/9WAAP/VgAD/1YEBs9eDAxnWggIA/cRFAP3FRgD9xUYY/cVGkv3FRu/9xUb//cVG//3F
+        Rv/9xUb//cVG//3FRv/9xUb//cVG//3FRv/9xkf/+L0+/9qICP/VfwD/1YAA/9WAAP/VgAD/1YAA/9WA
+        AP/VgAD/1YAA/9WAAP/VgAD/1YAA8daBAZXXgwMZ1oEBAN+SEwAAAAAAAAAAAP3FRgD9xUYG/cVGPv3F
+        RpH9xUbG/cVG2/3FRt79xUbe/cVG3v3FRt79xUbe/cVG3v3GR974vT7e2okJ4NWAAODVgQHg1YEB4NWB
+        AeDVgQHg1YEB4NWBAeDVgQHd1YEByNaBAZTWggJB2IUGBteEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAD9xUYA/cVGAf3FRg39xUYa/cVGHf3FRh39xUYd/cVGHf3FRh39xUYd/cZHHfi9Ph3biwwe14MEHteD
+        BB7XgwQe14MEHteDBB7XgwQe14MEHteEBBvYhQUO3IsLAtqICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA////////////////w///wwH//4AA//8AAH/+AAA//AAAP/wAAB/4AAAP
+        8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA
+        AAHAAAAD4AAAB/gAAB////////////////8=
+</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Каталог компьютерных игр "Пар" - Вход</value>

@@ -34,6 +34,7 @@ namespace CatalogGames
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -198,10 +199,8 @@ namespace CatalogGames
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.DeveloperTableAdapter = null;
-            
             this.tableAdapterManager.GamesTableAdapter = null;
             this.tableAdapterManager.GenresTableAdapter = null;
-            
             this.tableAdapterManager.UpdateOrder = CatalogGames.SteamDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
             // 
@@ -263,6 +262,7 @@ namespace CatalogGames
             this.Controls.Add(this.textBoxlogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.regmain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Каталог компьютерных игр \"Пар\" - Регистрация";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
@@ -277,7 +277,8 @@ namespace CatalogGames
 
         private void buttonlogin_Click(object sender, EventArgs e)
         {
-            if ((textBox1.Text == textBoxpassword.Text) && (textBox1.Text != "" && textBoxpassword.Text != "") && textBoxlogin.Text != "") {
+            if ((textBox1.Text == textBoxpassword.Text) && (textBox1.Text != "" && textBoxpassword.Text != "") && textBoxlogin.Text != "")
+            {
                 var ds = new SteamDataSet();
                 DataRow dr = ds.Users.NewRow();
                 dr[1] = textBoxlogin.Text;
@@ -288,13 +289,16 @@ namespace CatalogGames
                 MessageBox.Show("Вы успешно зарегистрировались!", "Регистрация", MessageBoxButtons.OK);
                 this.Visible = false;
                 f1.Visible = true;
-                
+
+            }
+            else {
+                MessageBox.Show("Произошла ошибка при регистрации. Проверьте введенные данные и попробуйте еще раз", "Регистрация", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == textBoxpassword.Text && textBox1.Text.Length > 0)
+            if ((textBox1.Text == textBoxpassword.Text && textBox1.Text.Length > 0) || (textBox1.Text.Length == 0 || textBoxpassword.Text.Length == 0))
             {
                 label4.ForeColor = System.Drawing.ColorTranslator.FromHtml("#58A9DB");
             }

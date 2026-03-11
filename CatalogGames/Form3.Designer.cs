@@ -79,10 +79,10 @@
             this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -92,7 +92,6 @@
             this.genre_comboBox = new System.Windows.Forms.ComboBox();
             this.button19 = new System.Windows.Forms.Button();
             this.linkTextBox = new System.Windows.Forms.TextBox();
-            this.gamesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -114,18 +113,6 @@
             this.descriptionTextBox = new System.Windows.Forms.TextBox();
             this.name_of_gameTextBox = new System.Windows.Forms.TextBox();
             this.picturePictureBox = new System.Windows.Forms.PictureBox();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.gamesDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -170,6 +157,7 @@
             this.genresTableAdapter = new CatalogGames.SteamDataSetTableAdapters.GenresTableAdapter();
             this.developerTableAdapter = new CatalogGames.SteamDataSetTableAdapters.DeveloperTableAdapter();
             this.usersTableAdapter = new CatalogGames.SteamDataSetTableAdapters.UsersTableAdapter();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             exist_in_RussiaLabel = new System.Windows.Forms.Label();
             age_ratingLabel = new System.Windows.Forms.Label();
             minimum_system_requirementsLabel = new System.Windows.Forms.Label();
@@ -191,20 +179,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.developerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.developerDataGridView)).BeginInit();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gamesDataGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.cabinet.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // exist_in_RussiaLabel
@@ -212,63 +198,63 @@
             exist_in_RussiaLabel.AutoSize = true;
             exist_in_RussiaLabel.Location = new System.Drawing.Point(472, 178);
             exist_in_RussiaLabel.Name = "exist_in_RussiaLabel";
-            exist_in_RussiaLabel.Size = new System.Drawing.Size(78, 13);
+            exist_in_RussiaLabel.Size = new System.Drawing.Size(83, 13);
             exist_in_RussiaLabel.TabIndex = 55;
-            exist_in_RussiaLabel.Text = "Exist in Russia:";
+            exist_in_RussiaLabel.Text = "Наличие в РФ:";
             // 
             // age_ratingLabel
             // 
             age_ratingLabel.AutoSize = true;
             age_ratingLabel.Location = new System.Drawing.Point(470, 147);
             age_ratingLabel.Name = "age_ratingLabel";
-            age_ratingLabel.Size = new System.Drawing.Size(58, 13);
+            age_ratingLabel.Size = new System.Drawing.Size(116, 13);
             age_ratingLabel.TabIndex = 53;
-            age_ratingLabel.Text = "Age rating:";
+            age_ratingLabel.Text = "Возрастное огранич.:";
             // 
             // minimum_system_requirementsLabel
             // 
             minimum_system_requirementsLabel.AutoSize = true;
             minimum_system_requirementsLabel.Location = new System.Drawing.Point(470, 32);
             minimum_system_requirementsLabel.Name = "minimum_system_requirementsLabel";
-            minimum_system_requirementsLabel.Size = new System.Drawing.Size(149, 13);
+            minimum_system_requirementsLabel.Size = new System.Drawing.Size(205, 13);
             minimum_system_requirementsLabel.TabIndex = 52;
-            minimum_system_requirementsLabel.Text = "Minimum system requirements:";
+            minimum_system_requirementsLabel.Text = "Минимальные системные требования:";
             // 
             // gamepadLabel
             // 
             gamepadLabel.AutoSize = true;
             gamepadLabel.Location = new System.Drawing.Point(220, 240);
             gamepadLabel.Name = "gamepadLabel";
-            gamepadLabel.Size = new System.Drawing.Size(56, 13);
+            gamepadLabel.Size = new System.Drawing.Size(70, 13);
             gamepadLabel.TabIndex = 50;
-            gamepadLabel.Text = "Gamepad:";
+            gamepadLabel.Text = "Контроллер:";
             // 
             // date_of_publicationLabel
             // 
             date_of_publicationLabel.AutoSize = true;
             date_of_publicationLabel.Location = new System.Drawing.Point(220, 214);
             date_of_publicationLabel.Name = "date_of_publicationLabel";
-            date_of_publicationLabel.Size = new System.Drawing.Size(99, 13);
+            date_of_publicationLabel.Size = new System.Drawing.Size(90, 13);
             date_of_publicationLabel.TabIndex = 48;
-            date_of_publicationLabel.Text = "Date of publication:";
+            date_of_publicationLabel.Text = "Год публикации:";
             // 
             // developerLabel
             // 
             developerLabel.AutoSize = true;
             developerLabel.Location = new System.Drawing.Point(220, 183);
             developerLabel.Name = "developerLabel";
-            developerLabel.Size = new System.Drawing.Size(59, 13);
+            developerLabel.Size = new System.Drawing.Size(75, 13);
             developerLabel.TabIndex = 46;
-            developerLabel.Text = "Developer:";
+            developerLabel.Text = "Разработчик:";
             // 
             // genre_IDLabel
             // 
             genre_IDLabel.AutoSize = true;
             genre_IDLabel.Location = new System.Drawing.Point(220, 153);
             genre_IDLabel.Name = "genre_IDLabel";
-            genre_IDLabel.Size = new System.Drawing.Size(53, 13);
+            genre_IDLabel.Size = new System.Drawing.Size(39, 13);
             genre_IDLabel.TabIndex = 44;
-            genre_IDLabel.Text = "Genre ID:";
+            genre_IDLabel.Text = "Жанр:";
             // 
             // ratingLabel
             // 
@@ -302,9 +288,9 @@
             linkLabel1.AutoSize = true;
             linkLabel1.Location = new System.Drawing.Point(472, 199);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new System.Drawing.Size(30, 13);
+            linkLabel1.Size = new System.Drawing.Size(49, 13);
             linkLabel1.TabIndex = 69;
-            linkLabel1.Text = "Link:";
+            linkLabel1.Text = "Ссылка:";
             // 
             // tabPage4
             // 
@@ -316,7 +302,7 @@
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1398, 665);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Жанры и теги";
+            this.tabPage4.Text = "Жанры";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // groupBox1
@@ -547,6 +533,7 @@
             this.number_of_employeesTextBox.Name = "number_of_employeesTextBox";
             this.number_of_employeesTextBox.Size = new System.Drawing.Size(100, 20);
             this.number_of_employeesTextBox.TabIndex = 12;
+            this.number_of_employeesTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.number_of_employeesTextBox_KeyPress);
             // 
             // websiteTextBox
             // 
@@ -665,7 +652,6 @@
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
             this.tabPage1.Controls.Add(this.groupBox5);
-            this.tabPage1.Controls.Add(this.bindingNavigator1);
             this.tabPage1.Controls.Add(this.gamesDataGridView);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -675,40 +661,11 @@
             this.tabPage1.Text = "Игры";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.gamesBindingSource, "Rating", true));
-            this.numericUpDown1.DecimalPlaces = 1;
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDown1.Location = new System.Drawing.Point(274, 124);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(45, 20);
-            this.numericUpDown1.TabIndex = 17;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.numericUpDown1);
             this.groupBox5.Controls.Add(this.comboBox5);
-            this.groupBox5.Controls.Add(this.pictureBox1);
+            this.groupBox5.Controls.Add(this.pictureBox2);
             this.groupBox5.Controls.Add(this.groupBox2);
             this.groupBox5.Controls.Add(this.btnSelectImage);
             this.groupBox5.Controls.Add(this.developer_comboBox);
@@ -754,6 +711,40 @@
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.gamesBindingSource, "Rating", true));
+            this.numericUpDown1.DecimalPlaces = 1;
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown1.Location = new System.Drawing.Point(274, 124);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(45, 20);
+            this.numericUpDown1.TabIndex = 17;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // gamesBindingSource
+            // 
+            this.gamesBindingSource.DataMember = "Games";
+            this.gamesBindingSource.DataSource = this.steamDataSet;
+            // 
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
@@ -763,21 +754,11 @@
             "12+",
             "16+",
             "18+ "});
-            this.comboBox5.Location = new System.Drawing.Point(534, 144);
+            this.comboBox5.Location = new System.Drawing.Point(585, 144);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(76, 21);
+            this.comboBox5.Size = new System.Drawing.Size(90, 21);
             this.comboBox5.TabIndex = 78;
             this.comboBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox5_KeyPress);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(675, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(10, 212);
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
             // 
             // groupBox2
             // 
@@ -791,6 +772,7 @@
             this.groupBox2.TabIndex = 77;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Средний рейтинг игр от каждого разработчика";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // button4
             // 
@@ -835,9 +817,9 @@
             // developer_comboBox
             // 
             this.developer_comboBox.FormattingEnabled = true;
-            this.developer_comboBox.Location = new System.Drawing.Point(279, 180);
+            this.developer_comboBox.Location = new System.Drawing.Point(301, 180);
             this.developer_comboBox.Name = "developer_comboBox";
-            this.developer_comboBox.Size = new System.Drawing.Size(183, 21);
+            this.developer_comboBox.Size = new System.Drawing.Size(161, 21);
             this.developer_comboBox.TabIndex = 73;
             this.developer_comboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.developer_comboBox_KeyPress);
             // 
@@ -863,19 +845,14 @@
             // linkTextBox
             // 
             this.linkTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gamesBindingSource, "Link", true));
-            this.linkTextBox.Location = new System.Drawing.Point(508, 196);
+            this.linkTextBox.Location = new System.Drawing.Point(527, 196);
             this.linkTextBox.Name = "linkTextBox";
-            this.linkTextBox.Size = new System.Drawing.Size(138, 20);
+            this.linkTextBox.Size = new System.Drawing.Size(148, 20);
             this.linkTextBox.TabIndex = 70;
-            // 
-            // gamesBindingSource
-            // 
-            this.gamesBindingSource.DataMember = "Games";
-            this.gamesBindingSource.DataSource = this.steamDataSet;
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(714, 190);
+            this.button16.Location = new System.Drawing.Point(690, 190);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(107, 51);
             this.button16.TabIndex = 18;
@@ -885,7 +862,7 @@
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(714, 122);
+            this.button17.Location = new System.Drawing.Point(690, 122);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(107, 51);
             this.button17.TabIndex = 17;
@@ -905,7 +882,7 @@
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(714, 55);
+            this.button18.Location = new System.Drawing.Point(690, 55);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(107, 51);
             this.button18.TabIndex = 16;
@@ -946,7 +923,6 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "По названию",
-            "По оценке",
             "По жанру",
             "По разработчику",
             "По поддержке геймпада",
@@ -972,7 +948,7 @@
             this.GPU_textbox.Location = new System.Drawing.Point(511, 111);
             this.GPU_textbox.MaxLength = 50;
             this.GPU_textbox.Name = "GPU_textbox";
-            this.GPU_textbox.Size = new System.Drawing.Size(135, 20);
+            this.GPU_textbox.Size = new System.Drawing.Size(164, 20);
             this.GPU_textbox.TabIndex = 62;
             // 
             // label12
@@ -980,16 +956,16 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(472, 114);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 13);
+            this.label12.Size = new System.Drawing.Size(24, 13);
             this.label12.TabIndex = 61;
-            this.label12.Text = "GPU:";
+            this.label12.Text = "ГП:";
             // 
             // RAM_textbox
             // 
             this.RAM_textbox.Location = new System.Drawing.Point(511, 82);
             this.RAM_textbox.MaxLength = 5;
             this.RAM_textbox.Name = "RAM_textbox";
-            this.RAM_textbox.Size = new System.Drawing.Size(135, 20);
+            this.RAM_textbox.Size = new System.Drawing.Size(164, 20);
             this.RAM_textbox.TabIndex = 60;
             // 
             // label11
@@ -997,16 +973,16 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(472, 85);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 13);
+            this.label11.Size = new System.Drawing.Size(33, 13);
             this.label11.TabIndex = 59;
-            this.label11.Text = "RAM:";
+            this.label11.Text = "ОЗУ:";
             // 
             // CPU_textbox
             // 
             this.CPU_textbox.Location = new System.Drawing.Point(511, 52);
             this.CPU_textbox.MaxLength = 50;
             this.CPU_textbox.Name = "CPU_textbox";
-            this.CPU_textbox.Size = new System.Drawing.Size(135, 20);
+            this.CPU_textbox.Size = new System.Drawing.Size(164, 20);
             this.CPU_textbox.TabIndex = 58;
             // 
             // label10
@@ -1014,9 +990,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(472, 55);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.Size = new System.Drawing.Size(26, 13);
             this.label10.TabIndex = 57;
-            this.label10.Text = "CPU:";
+            this.label10.Text = "ЦП:";
             // 
             // exist_in_RussiaCheckBox
             // 
@@ -1030,7 +1006,7 @@
             // gamepadCheckBox
             // 
             this.gamepadCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.gamesBindingSource, "Gamepad", true));
-            this.gamepadCheckBox.Location = new System.Drawing.Point(282, 235);
+            this.gamepadCheckBox.Location = new System.Drawing.Point(293, 235);
             this.gamepadCheckBox.Name = "gamepadCheckBox";
             this.gamepadCheckBox.Size = new System.Drawing.Size(26, 24);
             this.gamepadCheckBox.TabIndex = 51;
@@ -1073,122 +1049,6 @@
             this.picturePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturePictureBox.TabIndex = 3;
             this.picturePictureBox.TabStop = false;
-            // 
-            // bindingNavigator1
-            // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.gamesBindingSource;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(1078, 1);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(263, 25);
-            this.bindingNavigator1.TabIndex = 15;
-            this.bindingNavigator1.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Положение";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // gamesDataGridView
             // 
@@ -1603,6 +1463,16 @@
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Location = new System.Drawing.Point(812, 47);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(11, 212);
+            this.pictureBox2.TabIndex = 17;
+            this.pictureBox2.TabStop = false;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1611,6 +1481,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(169)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(1406, 688);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.Text = "Каталог компьютерных игр \"Пар\" - Главная";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form3_FormClosed);
@@ -1627,18 +1498,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.developerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.developerDataGridView)).EndInit();
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gamesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gamesDataGridView)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.cabinet.ResumeLayout(false);
@@ -1647,6 +1513,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1668,18 +1535,6 @@
         private System.Windows.Forms.DataGridView genresDataGridView;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.DataGridView gamesDataGridView;
         private System.Windows.Forms.PictureBox picturePictureBox;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1779,8 +1634,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

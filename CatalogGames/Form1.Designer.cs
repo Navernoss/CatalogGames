@@ -169,10 +169,8 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.DeveloperTableAdapter = null;
-           
             this.tableAdapterManager.GamesTableAdapter = null;
             this.tableAdapterManager.GenresTableAdapter = null;
-            
             this.tableAdapterManager.UpdateOrder = CatalogGames.SteamDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
             // 

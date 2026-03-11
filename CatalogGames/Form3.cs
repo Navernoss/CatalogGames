@@ -39,7 +39,9 @@ namespace CatalogGames
             {
                 label3.Text = "Пользователь";
                 label6.Text = "Разрешения:\n" +
-                    " - Просматривать таблицы";
+                    " - Просматривать таблицу 'Игры'\n" +
+                    " - Фильтровать таблицу 'Игры'\n" +
+                    " - Выполнять расчет среднего рейтинга игр от каждого разработчика";
                 groupBox1.Visible = false;
                 groupBox3.Visible = false;
                 groupBox4.Visible = false;
@@ -49,7 +51,21 @@ namespace CatalogGames
                 button16.Visible = false;
                 button17.Visible = false;
                 button18.Visible = false;
-                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+                name_of_gameTextBox.Enabled = false;
+                descriptionTextBox.Enabled = false;
+                gamepadCheckBox.AutoCheck = false;
+                exist_in_RussiaCheckBox.AutoCheck = false;
+                genre_comboBox.Enabled = false;
+                developer_comboBox.Enabled = false;
+                comboBox5.Enabled = false;
+                numericUpDown1.Enabled = false;
+                GPU_textbox.Enabled = false;
+                CPU_textbox.Enabled = false;
+                RAM_textbox.Enabled = false;
+                linkTextBox.Enabled = false;
+                date_of_publicationTextBox.Enabled = false;
+                btnSelectImage.Visible = false;
             }
             else
             {
@@ -66,7 +82,21 @@ namespace CatalogGames
                 groupBox3.Visible = true;
                 groupBox4.Visible = true;
                 usersDataGridView.Visible = true;
-                pictureBox1.Visible = true;
+                pictureBox2.Visible = true;
+                name_of_gameTextBox.Enabled = true;
+                descriptionTextBox.Enabled = true;
+                gamepadCheckBox.AutoCheck = true;
+                exist_in_RussiaCheckBox.AutoCheck = true;
+                genre_comboBox.Enabled = true;
+                developer_comboBox.Enabled = true;
+                comboBox5.Enabled = true;
+                numericUpDown1.Enabled = true;
+                GPU_textbox.Enabled = true;
+                CPU_textbox.Enabled = true;
+                RAM_textbox.Enabled = true;
+                linkTextBox.Enabled = true;
+                btnSelectImage.Visible = true;
+                date_of_publicationTextBox.Enabled = true;
                 ShowTab("tabPage2");
                 ShowTab("tabPage4");
             }
@@ -127,7 +157,7 @@ namespace CatalogGames
 
             // TODO: This line of code loads data into the 'steamDataSet.Games' table. You can move, or remove it, as needed.
             this.gamesTableAdapter.Fill(this.steamDataSet.Games);
-            System.Windows.Forms.Button[] buttons = { button1, button2, button3, button7, button8, button9, button10, button11, button12, button13, btnSelectImage, button19, button14, button15, button16, button17, button18, button19 };
+            System.Windows.Forms.Button[] buttons = { button1, button2, button3, button4, button7, button8, button9, button10, button11, button12, button13, btnSelectImage, button19, button14, button15, button16, button17, button18, button19 };
             foreach (System.Windows.Forms.Button btn in buttons)
             {
                 btn.BackColor = ColorTranslator.FromHtml("#829FE4");
@@ -194,7 +224,7 @@ namespace CatalogGames
                 System.Windows.Forms.TextBox[] textBoxes = { CPU_textbox, RAM_textbox, GPU_textbox };
                 for (int i = 0; i < textBoxes.Length; i++)
                 {
-                    textBoxes[i].Text = reqsplit[i].TrimStart().Split(':')[1];
+                    textBoxes[i].Text = reqsplit[i].TrimStart().Split(':')[1].Trim();
                 }
                 genre_comboBox.Items.Clear();
                 for (int i = 0; i < genresDataGridView.Rows.Count - 1; i++)
@@ -222,8 +252,8 @@ namespace CatalogGames
                     }
                 }
             }
-            
-            
+
+
         }
 
         private void Form3_FormClosed(object sender, FormClosedEventArgs e)
@@ -255,6 +285,7 @@ namespace CatalogGames
             {
                 MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
             }
+            genresBindingSource.EndEdit();
             genresTableAdapter.Update(steamDataSet);
         }
 
@@ -268,7 +299,11 @@ namespace CatalogGames
             }
             else if (button1.Text == "Сохранить строку")
             {
-
+                if (string.IsNullOrWhiteSpace(name_of_genreTextBox.Text))
+                {
+                    MessageBox.Show("Заполните поле!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (name_of_genreTextBox.Text == "")
                 {
                 }
@@ -377,14 +412,14 @@ namespace CatalogGames
                         if (rating < minRating) minRating = rating;
                         if (rating > maxRating) maxRating = rating;
 
-                        
+
                         if (gameCount == 1)
                             studioName = comboBox4.Text;
                     }
                 }
             }
 
-            
+
             if (gameCount == 0)
             {
                 MessageBox.Show("У этой студии нет игр в базе данных!",
@@ -394,7 +429,7 @@ namespace CatalogGames
 
             double avgRating = sumRating / gameCount;
 
-            
+
             string result = $@"📊 СТАТИСТИКА РАЗРАБОТЧИКА
 
 🏢 Студия: {studioName}
@@ -403,10 +438,10 @@ namespace CatalogGames
 📉 Худшая игра: {minRating:F1}
 📈 Лучшая игра: {maxRating:F1}";
 
-            MessageBox.Show(result, $"Анализ: {studioName}",
+            MessageBox.Show(result, $"Расчет: {studioName}",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-        
-}
+
+        }
 
 
 
@@ -427,7 +462,17 @@ namespace CatalogGames
                 picturePictureBox.Image = null;
                 button9.Text = "Сохранить строку";
 
-            } else if (button9.Text == "Сохранить строку") { 
+            } else if (button9.Text == "Сохранить строку") {
+                if (string.IsNullOrWhiteSpace(name_of_developerTextBox.Text) ||
+            string.IsNullOrWhiteSpace(txtDate.Text) ||
+            string.IsNullOrWhiteSpace(founderTextBox.Text) ||
+            string.IsNullOrWhiteSpace(websiteTextBox.Text) ||
+            string.IsNullOrWhiteSpace(number_of_employeesTextBox.Text))
+  
+                {
+                    MessageBox.Show("Заполните все поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 bool error = false;
                 if (name_of_developerTextBox.Text != "" && name_of_developerTextBox.Text != "" &&
                 txtDate.Text != "" &&
@@ -470,7 +515,7 @@ namespace CatalogGames
                         int lastIndex = developerDataGridView.Rows.Count - 1;
                         developerDataGridView.Rows[lastIndex].Selected = true;
                         developerDataGridView.CurrentCell = developerDataGridView.Rows[lastIndex].Cells[0];
-                       
+
                     }
                 }
             }
@@ -536,7 +581,7 @@ namespace CatalogGames
             {
                 MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
             }
-            
+
         }
 
         private void btnCalendar_Click(object sender, EventArgs e)
@@ -701,52 +746,54 @@ namespace CatalogGames
                 if (comboBox2.SelectedIndex == 0)
                 {
                     label1.Text = "Введите название игры:";
+                    comboBox3.Items.Clear();
+                    comboBox3.Text = "";
                 }
-                else if (comboBox2.SelectedIndex == 2)
+                else if (comboBox2.SelectedIndex == 1)
                 {
                     label1.Text = "Выберите жанр:";
                     comboBox3.Items.Clear();
+                    comboBox3.Text = "";
                     for (int i = 0; i < genresDataGridView.Rows.Count - 1; i++)
                     {
                         comboBox3.Items.Add(genresDataGridView.Rows[i].Cells[1].Value.ToString());
                     }
                 }
-                else if (comboBox2.SelectedIndex == 1)
-                {
-                    label1.Text = "Выберите оценку:";
-                    comboBox3.MaxLength = 4;
 
-                }
-                else if (comboBox2.SelectedIndex == 3)
+                else if (comboBox2.SelectedIndex == 2)
                 {
                     label1.Text = "Выберите разработчика:";
                     comboBox3.Items.Clear();
+                    comboBox3.Text = "";
                     for (int i = 0; i < developerDataGridView.Rows.Count; i++)
                     {
                         comboBox3.Items.Add(developerDataGridView.Rows[i].Cells[1].Value.ToString());
                     }
                 }
-                else if (comboBox2.SelectedIndex == 4)
+                else if (comboBox2.SelectedIndex == 3)
                 {
                     label1.Text = "Поддерживает ли игра геймпад";
                     comboBox3.Items.Clear();
+                    comboBox3.Text = "";
                     comboBox3.Items.Add("Да");
                     comboBox3.Items.Add("Нет");
                 }
-                else if (comboBox2.SelectedIndex == 5)
+                else if (comboBox2.SelectedIndex == 4)
                 {
                     label1.Text = "Выберите рейтинг:";
                     comboBox3.Items.Clear();
+                    comboBox3.Text = "";
                     comboBox3.Items.Add("0+");
-                    comboBox3.Items.Add("7+");
+                    comboBox3.Items.Add("6+");
                     comboBox3.Items.Add("12+");
                     comboBox3.Items.Add("16+");
                     comboBox3.Items.Add("18+");
                 }
-                else if (comboBox2.SelectedIndex == 6)
+                else if (comboBox2.SelectedIndex == 5)
                 {
                     label1.Text = "Доступна ли игра в РФ";
                     comboBox3.Items.Clear();
+                    comboBox3.Text = "";
                     comboBox3.Items.Add("Да");
                     comboBox3.Items.Add("Нет");
                 }
@@ -764,24 +811,6 @@ namespace CatalogGames
                 }
                 else if (comboBox2.SelectedIndex == 1)
                 {
-                    char[] chars = comboBox3.Text.ToCharArray();
-                    if (chars.Length == 4)
-                    {
-                        if ((chars[0] == '>' || chars[0] == '=' || chars[0] == '<') &&
-                            (char.IsDigit(chars[1])) &&
-                            (chars[2] == '.') &&
-                            (char.IsDigit(chars[3])))
-                        {
-                            gamesBindingSource.Filter = "Rating " + comboBox3.Text;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Неверный формат фильтрации. Примеры верного формата: >9.5, <8.0, =5.8.", "Фильтрация", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                else if (comboBox2.SelectedIndex == 2)
-                {
                     string genre = comboBox3.Text;
                     for (int i = 0; i < genresDataGridView.Rows.Count - 1; i++)
                     {
@@ -793,7 +822,7 @@ namespace CatalogGames
                     }
 
                 }
-                else if (comboBox2.SelectedIndex == 3)
+                else if (comboBox2.SelectedIndex == 2)
                 {
                     string dev = comboBox3.Text;
                     for (int i = 0; i < developerDataGridView.Rows.Count; i++)
@@ -805,7 +834,7 @@ namespace CatalogGames
                         }
                     }
                 }
-                else if (comboBox2.SelectedIndex == 4)
+                else if (comboBox2.SelectedIndex == 3)
                 {
                     if (comboBox3.Text == "Да" || comboBox3.Text == "Нет")
                     {
@@ -819,11 +848,17 @@ namespace CatalogGames
                         }
                     }
                 }
-                else if (comboBox2.SelectedIndex == 5)
+                else if (comboBox2.SelectedIndex == 4)
                 {
-                    gamesBindingSource.Filter = "[Age rating] LIKE '%" + comboBox3.Text + "%'";
+                    if (comboBox3.Text == "6+")
+                    {
+                        gamesBindingSource.Filter = "[Age rating] LIKE '%" + comboBox3.Text + "%' AND [Age rating] NOT LIKE '16+'";
+                    }
+                    else {
+                        gamesBindingSource.Filter = "[Age rating] LIKE '%" + comboBox3.Text + "%'";
+                    }
                 }
-                else if (comboBox2.SelectedIndex == 6)
+                else if (comboBox2.SelectedIndex == 5)
                 {
                     if (comboBox3.Text == "Да" || comboBox3.Text == "Нет")
                     {
@@ -872,7 +907,8 @@ namespace CatalogGames
 
         private void button18_Click(object sender, EventArgs e)
         {
-            if (button18.Text == "Добавить строку") {
+            if (button18.Text == "Добавить строку")
+            {
                 gamesDataGridView.CurrentCell = null;
                 name_of_gameTextBox.Text = "";
                 descriptionTextBox.Text = "";
@@ -885,13 +921,25 @@ namespace CatalogGames
                 linkTextBox.Text = "";
                 picturePictureBox.Image = null;
                 button18.Text = "Сохранить строку";
+                return;
             }
             else if (button18.Text == "Сохранить строку")
             {
+                if (string.IsNullOrWhiteSpace(name_of_gameTextBox.Text) ||
+            string.IsNullOrWhiteSpace(descriptionTextBox.Text) ||
+            string.IsNullOrWhiteSpace(date_of_publicationTextBox.Text) ||
+            string.IsNullOrWhiteSpace(CPU_textbox.Text) ||
+            string.IsNullOrWhiteSpace(RAM_textbox.Text) ||
+            string.IsNullOrWhiteSpace(GPU_textbox.Text) ||
+            string.IsNullOrWhiteSpace(comboBox5.Text) ||
+            string.IsNullOrWhiteSpace(linkTextBox.Text))
+                {
+                    MessageBox.Show("Заполните все поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (name_of_gameTextBox.Text != "" &&
             descriptionTextBox.Text != "" &&
             numericUpDown1.Text != "" &&
-
             date_of_publicationTextBox.Text != "" &&
             CPU_textbox.Text != "" &&
             RAM_textbox.Text != "" &&
@@ -958,17 +1006,17 @@ namespace CatalogGames
                             gamesBindingSource.EndEdit();
                             gamesTableAdapter.Update(steamDataSet);
                             gamesDataGridView.ClearSelection();
-                            button18.Text = "Добавить строку";                         
+                            button18.Text = "Добавить строку";
                             gamesDataGridView.DataSource = false;
                             gamesDataGridView.DataSource = gamesBindingSource;
                             int lastIndex = gamesDataGridView.Rows.Count - 1;
                             gamesDataGridView.Rows[lastIndex].Selected = true;
-                            gamesDataGridView.CurrentCell = gamesDataGridView.Rows[lastIndex].Cells[1];
                             break;
                         }
                     }
                 }
             }
+            
         }
 
         private void genre_comboBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -994,7 +1042,7 @@ namespace CatalogGames
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "Images|*.jpg;*.jpeg;*.png;*.bmp";
+                ofd.Filter = "Images|*.png";
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
@@ -1082,7 +1130,7 @@ namespace CatalogGames
                 }
                 gamesDataGridView.Rows[id].Cells["dataGridViewCheckBoxColumn2"].Value = exist_in_RussiaCheckBox.Checked;
                 gamesDataGridView.Rows[id].Cells["dataGridViewImageColumn1"].Value = selectedImageBytes;
-                gamesTableAdapter.Update(steamDataSet);
+                
 
             }
             else
@@ -1090,7 +1138,7 @@ namespace CatalogGames
                 MessageBox.Show("Произошла ошибка. Повторите попытку", "Ошибка", MessageBoxButtons.OK);
             }
             gamesBindingSource.EndEdit();
-           // gamesTableAdapter.Update(steamDataSet);
+            gamesTableAdapter.Update(steamDataSet);
         }
 
         private void button20_Click_1(object sender, EventArgs e)
@@ -1101,6 +1149,19 @@ namespace CatalogGames
         private void comboBox5_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void number_of_employeesTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
             
